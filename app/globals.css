@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #e30803;
+  --secondary: rgba(0, 0, 0, 1);
+  --white_fade: rgba(255, 255, 255, 0.4);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --font-jost: var(--font-jost);
+  --font-allerta_stencil: var(--font-allerta_stencil);
+  --font-bebas_Neue: var(--font-bebas_Neue);
 }
-
-@media (prefers-color-scheme: dark) {
+.red_grad_bg {
+  @apply bg-gradient-to-br from-red-600 to-red-500;
+}
+.red_grad_text {
+  @apply bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent;
+}
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jost), sans-serif;
+  font-weight: normal;
+}
+
+@layer base {
+  html::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: var(--secondary);
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border: 0.25rem solid transparent;
+  }
+
+  html::-webkit-scrollbar-button {
+    display: none;
+  }
 }
