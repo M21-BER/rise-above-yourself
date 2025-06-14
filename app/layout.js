@@ -1,8 +1,16 @@
 import { Allerta_Stencil, Jost, Bebas_Neue } from "next/font/google";
+import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import Head from "./components/Head";
 import Footer from "./components/Footer";
+
+const bidsak = localFont({
+  src: "./fonts/Bisdak.ttf",
+  display: "swap",
+  weight: "400",
+  variable: "--font-bidsak",
+});
 
 const allerta_Stencil = Allerta_Stencil({
   variable: "--font-allerta_stencil",
@@ -30,7 +38,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head />
       <body
-        className={`flex min-h-screen flex-col ${jost.variable} ${allerta_Stencil.variable} ${bebas_Neue.variable} antialiased`}
+        className={`flex min-h-screen flex-col ${jost.variable} ${bidsak.variable} ${allerta_Stencil.variable} ${bebas_Neue.variable} antialiased`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -1,148 +1,146 @@
 "use client";
+
 import { useState } from "react";
 import Header from "../../components/Header";
 import { FaChild, FaUsers } from "react-icons/fa";
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { MdPerson } from "react-icons/md";
-import CheckItem from "@/app/components/CheckItem";
+import { FiChevronDown } from "react-icons/fi";
 
 const services = [
   {
-    title: "Adult Functional Training",
-    subtitle: "Strength & mobility for all adults",
+    title: "Functional Training",
+    subtitle: "Strength & Mobility",
     icon: GiWeightLiftingUp,
-    content:
-      "This program focuses on improving strength, mobility, and endurance through functional movement patterns tailored for adults of all levels.",
-    list: [
-      "Train to own your body.",
-      "This group-based program focuses on bodyweight mastery, strength, mobility, and endurance.",
-      "You'll learn how to move better, feel stronger, and build discipline through high-intensity, full-body workouts.",
-      "Functional strength & conditioning",
-      "Core & mobility training",
-      "Endurance + explosiveness",
-      "For all levels — we scale with you",
-      "Who it's for: Adults of all fitness levels who want real results and a community to push them.",
-    ],
+    description:
+      "Focuses on building strength, stability, and mobility that directly improves the way you move in real life and in sport. It's about training the body as a connected system, not isolated parts — helping you perform better, move safer, and feel stronger day to day.",
+    quote:
+      "NO EXPERIENCE NEEDED. JUST SHOW UP, BE READY TO WORK, AND WE'LL GUIDE YOU EVERY STEP OF THE WAY.",
+    cta: "BOOK YOUR FIRST SESSION",
   },
   {
-    title: "Youth Athlete Development (Ages 9–15)",
-    subtitle: "Building foundational athletic skills",
+    title: "Youth Soccer Training",
+    subtitle: "Building Foundational Athletic Skills",
     icon: FaChild,
-    content:
-      "A foundational program for young athletes focusing on agility, coordination, strength, and sportsmanship in a supportive environment.",
-    list: [
-      "Discipline. Confidence. Movement.",
-      "We help young athletes build a strong foundation through age-appropriate functional training.",
-      "It's not just about getting stronger — it's about building focus, self-control, and pride through movement.",
-      "Bodyweight training",
-      "Speed, agility & coordination",
-      "Mental toughness & discipline",
-      "Positive, structured environment",
-      "Who it's for: Youth with or without sports backgrounds, ready to grow in strength and mindset.",
-    ],
+    description:
+      "Our youth soccer training is built to help young players get stronger, faster, and more confident in their game. We focus on overall athletic development including agility, strength, coordination, and speed while creating a space where kids can grow through structure and discipline.",
+    quote:
+      "NO MATTER THEIR STARTING POINT, EVERY ATHLETE IS WELCOMED WITH PATIENCE, SUPPORT, AND HIGH STANDARDS.",
+    cta: "ENROLL NOW",
   },
   {
-    title: "Pop-Ups & Community Training",
-    subtitle: "Group workouts & fitness events",
+    title: "Soccer Camps & Events",
+    subtitle: "Pop-Ups & Community Training",
     icon: FaUsers,
-    content:
-      "Seasonal group workouts hosted in the community for fun, fitness, and connection. Open to all skill levels.",
-    list: [
-      "We bring the energy to you.",
-      "We host outdoor bootcamps, school sessions, and community pop-ups throughout the DMV area.",
-      "These sessions are perfect for schools, youth programs, teams, or organizations who want to bring fitness into their space.",
-      "Group-based movement workshops",
-      "Performance + mindset coaching",
-      "Great for schools, rec centers, nonprofits",
-      "Who it's for: Community partners looking to host an engaging, movement-based session.",
-      "Ready to Train?",
-      "Whether you're building your foundation or breaking plateaus, Ray Athletics is here to push you forward.",
-      "We don't just train athletes — we build them.",
-    ],
+    description:
+      "In addition to regular training, we occasionally host soccer camps and special events focused on skill development, conditioning, and team-building. These are great opportunities for players to train in a high-energy group setting and push themselves alongside others.",
+    quote:
+      "WE ANNOUNCE ALL UPCOMING CAMPS ON OUR SOCIAL MEDIA AND WEBSITE. BE SURE TO CHECK IN REGULARLY SO YOU DON'T MISS OUT.",
   },
   {
-    title: "1-on-1 Training",
-    subtitle: "Personalized coaching & progress",
+    title: "Personal Training",
+    subtitle: "Personalized Coaching",
     icon: MdPerson,
-    content:
-      "Personalized training sessions tailored to individual goals, mobility needs, and performance tracking.",
-    list: [
-      "Customized coaching. Zero distractions.",
-      "For those looking for personalized attention, we offer private sessions built around your specific goals.",
-      "Whether you're recovering from injury, training for a sport, or just starting out — we meet you where you are.",
-      "Customized programming",
-      "Technique corrections",
-      "Mobility & injury prevention",
-      "Goal-specific training blocks",
-      "Who it's for: Adults or youth who want hands-on, focused support.",
-    ],
+    description:
+      "Our personal training is focused on you and your goals. We work together to create a plan that fits your needs and helps you improve safely and effectively.",
+    quote:
+      "WHETHER YOU'RE NEW TO TRAINING OR LOOKING TO LEVEL UP, YOU'LL GET CONSISTENT SUPPORT AND GUIDANCE EVERY STEP OF THE WAY.",
+    cta: "START PRIVATE TRAINING",
   },
 ];
 
 export default function Services() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleIndex = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   return (
-    <div>
+    <div className="bg-black min-h-screen text-white">
       <Header page="Services" />
 
-      {/* Container with wide spacing and vertical padding */}
-      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-20 py-10">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Sidebar - 20% */}
-          <div className="w-full md:w-2/5 flex flex-col gap-4 border-r-2 border-red-500 pr-4">
-            {services.map(({ title, subtitle, icon: Icon }, index) => {
-              const isActive = index === activeIndex;
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col gap-6 items-center justify-center">
+          {services.map(
+            (
+              { title, subtitle, icon: Icon, description, quote, cta },
+              index
+            ) => {
+              const isOpen = index === activeIndex;
               return (
                 <div
                   key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`cursor-pointer w-full flex items-start gap-3 p-4 rounded-lg shadow-md transition duration-200 ${
-                    isActive
-                      ? "red_grad_bg text-white"
-                      : "bg-zinc-950 border border-[rgba(255,255,255,0.1)] text-white hover:shadow-lg"
+                  className={`w-full max-w-3xl bg-zinc-900 border border-white/10 rounded-2xl shadow-md overflow-hidden transition-all duration-300 ${
+                    isOpen ? "ring-2 ring-[rgba(0,0,0,0.1)]" : ""
                   }`}
                 >
-                  <Icon
-                    className={`text-2xl mt-1 ${
-                      isActive ? "text-white" : "text-red-500"
+                  {/* Card Header */}
+                  <button
+                    onClick={() => toggleIndex(index)}
+                    className={`w-full flex items-center justify-between gap-4 p-5 text-left transition-colors duration-300 ${
+                      isOpen ? "bg-[#D00A02]" : "hover:bg-zinc-800"
                     }`}
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-sm sm:text-base md:text-lg font-semibold">
-                      {title}
-                    </h3>
-                    <p
-                      className={`text-xs sm:text-sm ${
-                        isActive ? " text-white" : "text-gray-400"
+                  >
+                    <div className="flex items-start gap-4">
+                      <Icon
+                        className={`text-2xl mt-1 flex-shrink-0 ${
+                          isOpen ? "text-white" : "text-[#D00A02]"
+                        }`}
+                      />
+                      <div>
+                        <h3 className="text-lg sm:text-xl uppercase font-semibold">
+                          {title}
+                        </h3>
+                        <p
+                          className={`text-sm sm:text-base  ${
+                            isOpen ? "text-gray-100" : "text-gray-400"
+                          }`}
+                        >
+                          {subtitle}
+                        </p>
+                      </div>
+                    </div>
+
+                    <FiChevronDown
+                      className={`text-2xl text-white transition-transform duration-300 ${
+                        isOpen ? "rotate-180" : "rotate-0"
                       }`}
-                    >
-                      {subtitle}
-                    </p>
+                    />
+                  </button>
+
+                  {/* Expand Content */}
+                  <div
+                    className={`grid transition-all duration-500 ease-in-out overflow-hidden ${
+                      isOpen
+                        ? "grid-rows-[1fr] p-6 bg-zinc-950"
+                        : "grid-rows-[0fr] p-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden text-center flex flex-col items-center gap-4">
+                      <h4 className="text-2xl sm:text-3xl font-bold uppercase">
+                        {title}
+                      </h4>
+
+                      <p className="text-gray-300 text-sm sm:text-base max-w-2xl">
+                        {description}
+                      </p>
+
+                      <p className="font-semibold text-sm sm:text-base text-white max-w-xl italic">
+                        {quote}
+                      </p>
+
+                      {cta && (
+                        <button className="mt-4 px-6 py-3 text-sm sm:text-base font-semibold bg-[#D00A02] hover:opacity-80 text-white rounded-full transition">
+                          {cta}
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               );
-            })}
-          </div>
-
-          {/* Content - 80% */}
-          <div className="w-full md:w-4/5 p-2 sm:p-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-white">
-              {services[activeIndex].title}
-            </h2>
-            <div>
-              {services[activeIndex].list.map((item, key) => {
-                return (
-                  <div key={key}>
-                    <CheckItem
-                      text={item}
-                      addon="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mb-3"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+            }
+          )}
         </div>
       </div>
     </div>

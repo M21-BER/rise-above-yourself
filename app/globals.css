@@ -15,6 +15,7 @@
   --font-jost: var(--font-jost);
   --font-allerta_stencil: var(--font-allerta_stencil);
   --font-bebas_Neue: var(--font-bebas_Neue);
+  --font-bidsak: var(--font-bidsak);
 }
 .red_grad_bg {
   @apply bg-gradient-to-br from-red-600 to-red-500;
