@@ -14,7 +14,7 @@ export default function Contact() {
                 alt="Contact"
                 className="object-cover w-full h-full"
               />
-              <div className="absolute top-0 left-0 p-8 bg-black/70 text-white w-full">
+              <div className="absolute top-0 left-0 p-8 bg-black/95 text-white w-full">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
                   +1 (619) 404-7752
                 </h3>

@@ -69,16 +69,9 @@ export default function Brand() {
           <h2 className="font-allerta_stencil text-4xl sm:text-6xl mb-2">
             R.A.Y ATHLETICS
           </h2>
-          <h4 className="font-jost font-light italic text-2xl sm:text-3xl text-[#EF0101] mb-6">
+          <h4 className="font-light italic text-2xl sm:text-3xl text-[#EF0101] mb-6">
             RISE ABOVE YOURSELF
           </h4>
-          {/* <h4
-            className="font-jost font-medium italic text-2xl sm:text-3xl mb-6
-             bg-gradient-to-r from-red-600 via-red-500 to-red-700
-             bg-clip-text text-transparent"
-          >
-            RISE ABOVE YOURSELF
-          </h4> */}
         </motion.div>
       </div>
     </div>

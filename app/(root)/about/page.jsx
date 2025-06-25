@@ -1,12 +1,14 @@
 import SliderHeader from "./components/SliderHeader";
 import FounderSection from "./components/Founder";
 import MissionSlider from "./components/MissionSlider";
+import Header from "@/app/components/Header";
 
 export default function About() {
   return (
     <section className="bg-black text-white">
       {/* Header Section */}
-      <SliderHeader />
+      {/* <SliderHeader /> */}
+      <Header />
       <div className="container my-5 mx-auto px-4 py-12 flex justify-center flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
           ABOUT US

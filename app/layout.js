@@ -1,4 +1,4 @@
-import { Allerta_Stencil, Jost, Bebas_Neue } from "next/font/google";
+import { Allerta_Stencil, DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -17,13 +17,8 @@ const allerta_Stencil = Allerta_Stencil({
   subsets: ["latin"],
   weight: "400",
 });
-const bebas_Neue = Bebas_Neue({
-  variable: "--font-bebas_Neue",
-  subsets: ["latin"],
-  weight: "400",
-});
-const jost = Jost({
-  variable: "--font-jost",
+const dm_sans = DM_Sans({
+  variable: "--font-dm_sans",
   subsets: ["latin"],
 });
 
@@ -38,7 +33,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head />
       <body
-        className={`flex min-h-screen flex-col ${jost.variable} ${bidsak.variable} ${allerta_Stencil.variable} ${bebas_Neue.variable} antialiased`}
+        className={`flex min-h-screen flex-col ${bidsak.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>

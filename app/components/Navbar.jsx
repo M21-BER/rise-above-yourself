@@ -46,7 +46,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="hover:text-gray-300 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
+                    className="hover:text-gray-300 uppercase transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
                   >
                     {link.name}
                   </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
               <div className="flex items-center space-x-6">
                 <Link
                   href="/contact"
-                  className="px-4 py-1.5  bg-red-600  rounded hover:bg-white hover:text-black transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
+                  className="px-4 py-1.5  bg-red-600  rounded uppercase hover:bg-white hover:text-black transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
                 >
                   Contact Us
                 </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setSidebarOpen(false)}
-            className="px-4 py-1.5 border border-white rounded hover:bg-white hover:text-black transition text-sm sm:text-base md:text-lg"
+            className="px-4 py-1.5 border border-white rounded uppercase hover:bg-white hover:text-black transition text-sm sm:text-base md:text-lg"
           >
             Contact Us
           </Link>

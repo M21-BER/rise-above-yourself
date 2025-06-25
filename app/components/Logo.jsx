@@ -69,7 +69,8 @@ function Logo() {
         </h2>
         <h4
           className="
-            font-jost italic 
+            italic
+            font-extrabold
             text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] 
             text-[#D00A02]
             leading-snug
