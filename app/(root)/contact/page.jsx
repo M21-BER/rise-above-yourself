@@ -3,7 +3,7 @@ import Header from "@/app/components/Header";
 export default function Contact() {
   return (
     <section>
-      <Header />
+      <Header page="Contact Us" />
       <div className="min-h-screen text-black mt-10">
         <div className="container bg-white mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -27,56 +27,66 @@ export default function Contact() {
             </div>
 
             {/* Right: Contact Form */}
-            <div className="p-8 flex flex-col justify-center">
-              <h2 className="text-xl text-gray-900 sm:text-2xl md:text-3xl font-bold mb-6">
+            <div className="w-full p-8 bg-white rounded-2xl shadow-lg">
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
                 Let's talk
               </h2>
-              <form className="space-y-5">
+
+              <form className="space-y-6" noValidate>
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-xs sm:text-sm md:text-base font-medium"
+                    className="block text-gray-700 font-semibold text-base mb-2"
                   >
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
-                    className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                    className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent transition"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-xs sm:text-sm md:text-base font-medium"
+                    className="block text-gray-700 font-semibold text-base mb-2"
                   >
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
-                    className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                    className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent transition"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs sm:text-sm md:text-base font-medium"
+                    className="block text-gray-700 font-semibold text-base mb-2"
                   >
                     Message
                   </label>
                   <textarea
                     id="message"
-                    rows="4"
-                    className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base"
-                  ></textarea>
+                    name="message"
+                    rows={5}
+                    placeholder="Write your message here..."
+                    required
+                    className="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent transition"
+                  />
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-black text-white px-6 py-2 rounded-md hover:bg-red-600 transition text-sm sm:text-base"
+                  className="w-max px-10 bg-background text-white font-semibold rounded-full py-3 hover:bg-background/90 transition focus:outline-none focus:ring-4 focus:ring-red-300"
                 >
                   Send Message
                 </button>

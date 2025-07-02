@@ -1,13 +1,16 @@
 import Header from "../../components/Header";
 import FunctionalTrainingDescription from "./components/FunctionalTrainingDescription";
+import Functional from "./Functional";
 
 const FunctionalTraining = () => {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <h2 className="text-2xl sm:text-3xl text-white my-10 font-bold text-center ">
         WHAT IS FUNCTIONAL TRAINING?
-      </h2>
+      </h2> */}
+
+      <Functional />
       <FunctionalTrainingDescription />
     </div>
   );

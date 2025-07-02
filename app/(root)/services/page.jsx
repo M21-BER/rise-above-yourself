@@ -1,147 +1,216 @@
+// "use client";
+// import { useState } from "react";
+// import Header from "../../components/Header";
+
+// import { FiChevronDown } from "react-icons/fi";
+// import { services as servicesData } from "../../components/services";
+
+// export default function Services() {
+//   const [openStates, setOpenStates] = useState(servicesData.map(() => true));
+
+//   const toggleIndex = (index) => {
+//     setOpenStates((prev) =>
+//       prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
+//     );
+//   };
+
+//   return (
+//     <div className="bg-[#0a0a0a] text-white min-h-screen">
+//       <Header page="Services" />
+
+//       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-6">
+//         {servicesData.map(
+//           (
+//             { title, subtitle, icon: Icon, description, quote, cta, image },
+//             index
+//           ) => {
+//             const isOpen = openStates[index];
+
+//             return (
+//               <div
+//                 key={index}
+//                 className="bg-[#121212] border border-white/10 rounded-xl overflow-hidden transition-all shadow-md"
+//               >
+//                 {/* Header */}
+//                 <button
+//                   onClick={() => toggleIndex(index)}
+//                   className={`w-full flex items-center justify-between px-6 py-4 transition-colors ${
+//                     isOpen ? "grad" : "hover:bg-[#1c1c1c]"
+//                   }`}
+//                 >
+//                   <div className="flex items-center gap-4">
+//                     <Icon
+//                       className={`text-2xl ${
+//                         isOpen ? "text-white" : "text-[#D00A02]"
+//                       }`}
+//                     />
+//                     <div className="text-left">
+//                       <h3 className="text-lg sm:text-xl font-bold uppercase">
+//                         {title}
+//                       </h3>
+//                       <p className="text-sm sm:text-base text-gray-400">
+//                         {subtitle}
+//                       </p>
+//                     </div>
+//                   </div>
+//                   <FiChevronDown
+//                     className={`text-white text-2xl transition-transform duration-300 ${
+//                       isOpen ? "rotate-180" : "rotate-0"
+//                     }`}
+//                   />
+//                 </button>
+
+//                 {/* Expandable Content */}
+//                 <div
+//                   className={`transition-all duration-500 ease-in-out overflow-hidden ${
+//                     isOpen ? "max-h-screen" : "max-h-0"
+//                   }`}
+//                 >
+//                   <div className="grid md:grid-cols-2 gap-6 p-6">
+//                     {/* Image */}
+//                     <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden">
+//                       <img
+//                         src={image}
+//                         alt={title}
+//                         className="w-full h-full object-cover rounded-lg"
+//                       />
+//                     </div>
+
+//                     {/* Text */}
+//                     <div className="flex flex-col justify-center gap-4 text-left">
+//                       <h4 className="text-xl sm:text-2xl font-bold uppercase">
+//                         {title}
+//                       </h4>
+//                       <p className="text-gray-300 text-sm sm:text-base">
+//                         {description}
+//                       </p>
+//                       <p className="italic font-semibold text-white text-sm sm:text-base">
+//                         {quote}
+//                       </p>
+//                       {cta && (
+//                         <div className="flex flex-col md:flex-row items-center md:items-start">
+//                           <button className="mt-2 px-5 py-2.5 text-sm font-semibold bg-[#D00A02] hover:opacity-80 text-white rounded-full transition">
+//                             {cta}
+//                           </button>
+//                         </div>
+//                       )}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             );
+//           }
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
 "use client";
 
 import { useState } from "react";
 import Header from "../../components/Header";
-import { FaChild, FaUsers } from "react-icons/fa";
-import { GiWeightLiftingUp } from "react-icons/gi";
-import { MdPerson } from "react-icons/md";
 import { FiChevronDown } from "react-icons/fi";
-
-const services = [
-  {
-    title: "Functional Training",
-    subtitle: "Strength & Mobility",
-    icon: GiWeightLiftingUp,
-    description:
-      "Focuses on building strength, stability, and mobility that directly improves the way you move in real life and in sport. It's about training the body as a connected system, not isolated parts — helping you perform better, move safer, and feel stronger day to day.",
-    quote:
-      "NO EXPERIENCE NEEDED. JUST SHOW UP, BE READY TO WORK, AND WE'LL GUIDE YOU EVERY STEP OF THE WAY.",
-    cta: "BOOK YOUR FIRST SESSION",
-  },
-  {
-    title: "Youth Soccer Training",
-    subtitle: "Building Foundational Athletic Skills",
-    icon: FaChild,
-    description:
-      "Our youth soccer training is built to help young players get stronger, faster, and more confident in their game. We focus on overall athletic development including agility, strength, coordination, and speed while creating a space where kids can grow through structure and discipline.",
-    quote:
-      "NO MATTER THEIR STARTING POINT, EVERY ATHLETE IS WELCOMED WITH PATIENCE, SUPPORT, AND HIGH STANDARDS.",
-    cta: "ENROLL NOW",
-  },
-  {
-    title: "Soccer Camps & Events",
-    subtitle: "Pop-Ups & Community Training",
-    icon: FaUsers,
-    description:
-      "In addition to regular training, we occasionally host soccer camps and special events focused on skill development, conditioning, and team-building. These are great opportunities for players to train in a high-energy group setting and push themselves alongside others.",
-    quote:
-      "WE ANNOUNCE ALL UPCOMING CAMPS ON OUR SOCIAL MEDIA AND WEBSITE. BE SURE TO CHECK IN REGULARLY SO YOU DON'T MISS OUT.",
-  },
-  {
-    title: "Personal Training",
-    subtitle: "Personalized Coaching",
-    icon: MdPerson,
-    description:
-      "Our personal training is focused on you and your goals. We work together to create a plan that fits your needs and helps you improve safely and effectively.",
-    quote:
-      "WHETHER YOU'RE NEW TO TRAINING OR LOOKING TO LEVEL UP, YOU'LL GET CONSISTENT SUPPORT AND GUIDANCE EVERY STEP OF THE WAY.",
-    cta: "START PRIVATE TRAINING",
-  },
-];
+import { services as servicesData } from "../../components/services";
 
 export default function Services() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [openStates, setOpenStates] = useState(servicesData.map(() => true));
 
   const toggleIndex = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+    setOpenStates((prev) =>
+      prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
+    );
   };
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-[#0a0a0a] text-white min-h-screen">
       <Header page="Services" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col gap-6 items-center justify-center">
-          {services.map(
-            (
-              { title, subtitle, icon: Icon, description, quote, cta },
-              index
-            ) => {
-              const isOpen = index === activeIndex;
-              return (
-                <div
-                  key={index}
-                  className={`w-full max-w-3xl bg-zinc-900 border border-white/10 rounded-2xl shadow-md overflow-hidden transition-all duration-300 ${
-                    isOpen ? "ring-2 ring-[rgba(0,0,0,0.1)]" : ""
-                  }`}
-                >
-                  {/* Card Header */}
-                  <button
-                    onClick={() => toggleIndex(index)}
-                    className={`w-full flex items-center justify-between gap-4 p-5 text-left transition-colors duration-300 ${
-                      isOpen ? "bg-[#D00A02]" : "hover:bg-zinc-800"
-                    }`}
-                  >
-                    <div className="flex items-start gap-4">
-                      <Icon
-                        className={`text-2xl mt-1 flex-shrink-0 ${
-                          isOpen ? "text-white" : "text-[#D00A02]"
-                        }`}
-                      />
-                      <div>
-                        <h3 className="text-lg sm:text-xl uppercase font-semibold">
-                          {title}
-                        </h3>
-                        <p
-                          className={`text-sm sm:text-base  ${
-                            isOpen ? "text-gray-100" : "text-gray-400"
-                          }`}
-                        >
-                          {subtitle}
-                        </p>
-                      </div>
-                    </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-6">
+        {servicesData.map(
+          (
+            { title, subtitle, icon: Icon, description, quote, cta, image },
+            index
+          ) => {
+            const isOpen = openStates[index];
 
-                    <FiChevronDown
-                      className={`text-2xl text-white transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : "rotate-0"
+            return (
+              <div
+                key={index}
+                className="bg-[#121212] border border-white/10 rounded-xl overflow-hidden transition-all shadow-md"
+              >
+                {/* Header */}
+                <button
+                  onClick={() => toggleIndex(index)}
+                  className={`w-full flex items-center justify-between px-6 py-4 transition-colors ${
+                    isOpen ? "bg-[#D00A02]" : "hover:bg-[#1c1c1c]"
+                  }`}
+                  aria-expanded={isOpen}
+                >
+                  <div className="flex items-center gap-4">
+                    <Icon
+                      className={`text-2xl ${
+                        isOpen ? "text-white" : "text-[#D00A02]"
                       }`}
                     />
-                  </button>
-
-                  {/* Expand Content */}
-                  <div
-                    className={`grid transition-all duration-500 ease-in-out overflow-hidden ${
-                      isOpen
-                        ? "grid-rows-[1fr] p-6 bg-zinc-950"
-                        : "grid-rows-[0fr] p-0"
+                    <div className="text-left">
+                      <h3 className="text-lg sm:text-xl font-bold uppercase">
+                        {title}
+                      </h3>
+                      <p className="text-sm sm:text-base text-gray-400">
+                        {subtitle}
+                      </p>
+                    </div>
+                  </div>
+                  <FiChevronDown
+                    className={`text-white text-2xl transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : "rotate-0"
                     }`}
-                  >
-                    <div className="overflow-hidden text-center flex flex-col items-center gap-4">
-                      <h4 className="text-2xl sm:text-3xl font-bold uppercase">
+                  />
+                </button>
+
+                {/* Expandable Content */}
+                <div
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    isOpen ? "max-h-[2000px]" : "max-h-0"
+                  }`}
+                >
+                  <div className="grid md:grid-cols-2 gap-6 p-6">
+                    {/* Image */}
+                    <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                      <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+
+                    {/* Text Content */}
+                    <div className="flex flex-col justify-center gap-4 text-left">
+                      <h4 className="text-xl sm:text-2xl font-bold uppercase">
                         {title}
                       </h4>
-
-                      <p className="text-gray-300 text-sm sm:text-base max-w-2xl">
+                      <p className="text-gray-300 text-sm sm:text-base">
                         {description}
                       </p>
-
-                      <p className="font-semibold text-sm sm:text-base text-white max-w-xl italic">
+                      <p className="italic font-semibold text-white text-sm sm:text-base">
                         {quote}
                       </p>
 
                       {cta && (
-                        <button className="mt-4 px-6 py-3 text-sm sm:text-base font-semibold bg-[#D00A02] hover:opacity-80 text-white rounded-full transition">
-                          {cta}
-                        </button>
+                        <div className="flex flex-col md:flex-row items-center md:items-start">
+                          <button className="self-center md:self-start mt-2 px-5 py-2.5 text-sm font-semibold bg-[#D00A02] hover:opacity-80 text-white rounded-full transition">
+                            {cta}
+                          </button>
+                        </div>
                       )}
                     </div>
                   </div>
                 </div>
-              );
-            }
-          )}
-        </div>
+              </div>
+            );
+          }
+        )}
       </div>
     </div>
   );
