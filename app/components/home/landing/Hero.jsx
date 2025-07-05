@@ -80,7 +80,7 @@ function Hero() {
         {/* Show button only after splash */}
         {showVideo && (
           <Link
-            href="/about"
+            href="/contact"
             className="grad transition-all duration-300 ease-in-out 
                text-white text-base sm:text-lg md:text-xl font-semibold 
                px-5 sm:px-7 md:px-9 py-2.5 sm:py-3.5 md:py-4 

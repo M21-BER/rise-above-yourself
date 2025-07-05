@@ -19,7 +19,7 @@ const slides = [
         </span>
       </>
     ),
-    image: "/images/gym-image1.jpg",
+    image: "/images/gym.jpg",
     sub: "If you can move, you can train. If you can train, you can perform.",
   },
   {
@@ -30,7 +30,7 @@ const slides = [
         intentional practice rooted in movement and purpose.
       </>
     ),
-    image: "/images/gym-image2.jpg",
+    image: "/images/asset10.jpg",
     sub: "Discipline > Motivation. Show up daily.",
   },
   {
@@ -41,7 +41,7 @@ const slides = [
         discipline, and passion.
       </>
     ),
-    image: "/images/gym-image3.jpg",
+    image: "/images/gym-image2.jpg",
     sub: "Your effort today builds your strength tomorrow.",
   },
 ];

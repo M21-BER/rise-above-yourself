@@ -14,8 +14,10 @@ export default function FounderSection() {
         </h2>
 
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 max-w-xl">
-          Built on years of hands-on experience, studying movement, testing
-          methods, and helping people get stronger through{" "}
+          R.A.Y Athletics is a performance-focused training facility built from
+          the ground up to serve a bigger purpose than getting in shape. Built
+          on years of hands-on experience, studying movement, testing methods,
+          and helping people get stronger through{" "}
           <span className="text-[#D00A02] font-semibold italic">
             consistent real work.
           </span>{" "}
