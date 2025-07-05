@@ -1,132 +1,148 @@
-// import {
-//   FaInstagram,
-//   FaTiktok,
-//   FaPhoneAlt,
-//   FaMapMarkerAlt,
-//   FaFacebook,
-// } from "react-icons/fa";
-
-// export default function Footer() {
-//   return (
-//     <footer className="border-t-2 border-[rgba(255,255,255,0.1)] bg-black text-white py-10 px-6 text-sm">
-//       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 ">
-//         {/* Left Column - Contact Info */}
-//         <div>
-//           <h3 className="font-bold mb-3 text-white">Connect With Us</h3>
-//           <ul className="space-y-3 text-gray-400">
-//             <li className="flex items-center gap-2">
-//               <FaPhoneAlt className="text-[#E30803]" />
-//               +1 (619) 404-7752
-//             </li>
-//             <li className="flex items-start gap-2">
-//               <FaMapMarkerAlt className="text-[#E30803] mt-1" />
-//               <span>
-//                 5649L General Washington Dr. <br />
-//                 Alexandria, Virginia
-//               </span>
-//             </li>
-//           </ul>
-//         </div>
-
-//         {/* Right Column - Address + Social Icons */}
-//         <div className="md:pl-10 md:border-l-2 border-[#E30803] flex flex-col justify-between">
-//           {/* Address on Top */}
-//           <div>
-//             <h3 className="font-bold mb-3 text-white">Address</h3>
-//             <p className="text-gray-400">
-//               Ray Athletics HQ <br />
-//               5649L General Washington Dr. <br />
-//               Alexandria, VA 22312 <br />
-//               United States
-//             </p>
-//           </div>
-
-//           {/* Social Icons on Bottom */}
-//           <div className="mt-6 flex gap-5 text-lg">
-//             <a
-//               href="https://www.instagram.com/athlete_whispererr"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="hover:text-white text-gray-400"
-//               aria-label="Instagram"
-//             >
-//               <FaInstagram />
-//             </a>
-//             <a
-//               href="https://www.tiktok.com/discover/ray-athletics"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="hover:text-white text-gray-400"
-//               aria-label="TikTok"
-//             >
-//               <FaTiktok />
-//             </a>
-//             <a
-//               href="https://www.facebook.com/rayathletics"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="hover:text-white text-gray-400"
-//               aria-label="Facebook"
-//             >
-//               <FaFacebook />
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Bottom Text */}
-//       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-gray-500 text-xs">
-//         <p>SITE MAP | PRIVACY POLICY | TERMS OF SERVICE</p>
-//         <p className="mt-2">
-//           &copy; {new Date().getFullYear()} Rise Above Yourself
-//         </p>
-//       </div>
-//     </footer>
-//   );
-// }
-
-import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaTiktok,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-[rgba(255,255,255,0.1)] bg-black text-white py-10 px-6 text-sm">
-      {/* Social Icons Centered */}
-      <div className="flex justify-center gap-8 text-3xl mb-6">
-        <a
-          href="https://www.instagram.com/athlete_whispererr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white text-gray-400"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://www.tiktok.com/discover/ray-athletics"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white text-gray-400"
-          aria-label="TikTok"
-        >
-          <FaTiktok />
-        </a>
-        <a
-          href="https://www.facebook.com/rayathletics"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white text-gray-400"
-          aria-label="Facebook"
-        >
-          <FaFacebook />
-        </a>
-      </div>
+    <footer className="bg-[#fff] text-gray-800 px-6 sm:px-8 lg:px-16 py-12 text-sm">
+      <div className="max-w-7xl mx-auto space-y-12 pl-4 sm:pl-8 md:pl-12">
+        {/* Social Icons */}
+        <div className="flex justify-center gap-6 text-2xl">
+          <a
+            href="https://www.facebook.com/rayathletics"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="text-gray-500 hover:text-gray-800 transition"
+          >
+            <FaFacebook className="text-gray-800 hover:text-red-500 hover:opacity-75 hover:-translate-y-1 transition-transform duration-200" />
+          </a>
+          <a
+            href="https://www.instagram.com/athlete_whispererr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-gray-500 hover:text-gray-800 transition"
+          >
+            <FaInstagram className="text-gray-800 hover:text-red-500  hover:opacity-75 hover:-translate-y-1 transition-transform duration-200" />
+          </a>
+          <a
+            href="https://www.tiktok.com/discover/ray-athletics"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            className="text-gray-500 hover:text-gray-800 transition-transform duration-200"
+          >
+            <FaTiktok className="text-gray-800 hover:text-red-500  hover:opacity-75 hover:-translate-y-1 transition-transform duration-200" />
+          </a>
+        </div>
 
-      {/* Bottom Text */}
-      <div className="border-t border-gray-700 pt-4 text-center text-gray-500 text-xs">
-        <p>SITE MAP | PRIVACY POLICY | TERMS OF SERVICE</p>
-        <p className="mt-2">
-          &copy; {new Date().getFullYear()} Rise Above Yourself
-        </p>
+        {/* Quote */}
+        <div className="text-center text-lg font-medium italic text-gray-600">
+          “A professional coach will grow with you.”
+        </div>
+
+        {/* Footer Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10  md:text-left text-gray-600">
+          {/* Address */}
+          <div>
+            <h3 className="text-black font-semibold mb-3 tracking-wide">
+              Address
+            </h3>
+            <p>
+              {" "}
+              5649L General Washington Dr. <br />
+              Alexandria, Virginia
+            </p>
+            <p>Days: Monday – Friday</p>
+            <p>Time: 08:00AM – 06:00PM</p>
+            <p>Saturday & Sunday: Closed</p>
+          </div>
+
+          {/* Help */}
+          <div>
+            <h3 className="text-black font-semibold mb-3 tracking-wide">
+              Help
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/contact" className="hover:text-gray-900 transition">
+                  Looking for info?
+                </a>
+              </li>
+              <li>
+                <a href="/news" className="hover:text-gray-900 transition">
+                  Get latest news
+                </a>
+              </li>
+              <li>
+                <a href="/career" className="hover:text-gray-900 transition">
+                  Work with us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-black font-semibold mb-3 tracking-wide">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/ft" className="hover:text-gray-900 transition">
+                  Functional Training
+                </a>
+              </li>
+              <li>
+                <a href="/news" className="hover:text-gray-900 transition">
+                  News
+                </a>
+              </li>
+
+              <li>
+                <a href="/merch" className="hover:text-gray-900 transition">
+                  Our Products
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-black font-semibold mb-3 tracking-wide">
+              Contact
+            </h3>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2">
+                <FaEnvelope className="text-gray-700" />
+                <span>info@rayathletics.com</span>
+              </li>
+
+              <li className="flex items-center space-x-2">
+                <FaPhoneAlt className="text-gray-700" />
+                <span>+1 (619) 404-7752</span>
+              </li>
+
+              <li className="flex items-center space-x-2">
+                <FaPhoneAlt className="text-gray-700" />
+                <span>+1 (619) 404-7752</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Text */}
+        <div className="border-t border-gray-300 pt-4 text-center text-gray-500 text-xs">
+          <p>
+            &copy; {new Date().getFullYear()} Rise Above Yourself. All rights
+            reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

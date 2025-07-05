@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Brand from "./Brand";
 import Link from "next/link";
+import Image from "next/image";
 
 function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -36,10 +37,12 @@ function Hero() {
     <div className="relative w-full h-screen overflow-hidden mt-10 bg-black">
       {/* Show fallback image if video not loaded and 5 seconds passed */}
       {showVideo && !videoLoaded && (
-        <img
-          src="/images/fallback.jpg"
+        <Image
+          src="/images/asset10.jpg"
           alt="Fallback background"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       )}
 

@@ -3,9 +3,8 @@ import Image from "next/image";
 export default function Header({ page, subtitle }) {
   return (
     <header className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
-      {/* Background Image */}
       <Image
-        src="/images/gym.jpg" // Replace with your actual image path
+        src="/images/asset10.jpg"
         alt="Header Background"
         fill
         className="object-cover object-center z-0"

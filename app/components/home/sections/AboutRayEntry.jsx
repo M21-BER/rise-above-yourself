@@ -34,10 +34,10 @@ const AboutRayEntry = () => {
       {/* Image Section (now second) */}
       <div className="relative min-h-[300px] md:min-h-screen w-full order-1 md:order-2">
         <Image
-          src="/images/gym-image3.jpg"
+          src="/images/asset12.jpg"
           alt="Gym Equipment"
           fill
-          className="object-cover w-full h-full grayscale"
+          className="object-cover object-top w-full h-full grayscale"
           priority
         />
       </div>

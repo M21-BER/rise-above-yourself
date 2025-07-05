@@ -1,14 +1,18 @@
+import Image from "next/image";
 import React from "react";
 
 const Support = () => {
   return (
     <section className="relative w-full py-12 px-12 overflow-hidden">
       {/* Background image */}
-      <img
-        src="/images/gym-image4.jpg"
-        className="w-full h-full absolute inset-0 object-cover grayscale"
-        alt="Background"
-      />
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/images/asset10.jpg"
+          alt="Background"
+          fill
+          className="object-cover grayscale"
+        />
+      </div>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70"></div>

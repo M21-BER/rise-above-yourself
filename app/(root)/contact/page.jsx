@@ -1,18 +1,21 @@
 import Header from "@/app/components/Header";
+import Image from "next/image";
 
 export default function Contact() {
   return (
     <section>
       <Header page="Contact Us" />
-      <div className="min-h-screen text-black mt-10">
+      <div className="min-h-screen text-black my-10">
         <div className="container bg-white mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Left: Image + Contact Info Overlay */}
             <div className="relative h-96 md:h-auto">
-              <img
-                src="/images/gym.jpg" // ✅ Change to your image path
+              <Image
+                src="/images/asset10.jpg"
                 alt="Contact"
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover object-top grayscale"
+                priority
               />
               <div className="absolute top-0 left-0 p-8 bg-black/95 text-white w-full">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold">

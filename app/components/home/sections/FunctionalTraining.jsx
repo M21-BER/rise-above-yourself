@@ -8,8 +8,8 @@ const FunctionalTraining = () => {
       {/* Image Section */}
       <div className="relative  min-h-[300px] md:min-h-screen w-full">
         <Image
-          src="/images/slider2.jpg"
-          alt="Gym Equipment"
+          src="/images/asset11.jpg"
+          alt="functional training"
           fill
           className="object-cover w-full h-full grayscale"
           priority
