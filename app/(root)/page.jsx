@@ -3,15 +3,22 @@ import Hero from "../components/home/landing/Hero";
 import AboutRayEntry from "../components/home/sections/AboutRayEntry";
 import Support from "../components/home/sections/Support";
 import DownloadApp from "../components/home/sections/Download";
+import FunctionalShowcase from "../components/home/sections/FunctionalShowcase";
+import AppShowcase from "../components/AppShowcase";
+import Carousel from "../components/home/sections/Carousel";
 
 export default function HeroSection() {
   return (
     <>
       <Hero />
-      <AboutRayEntry />
+      <FunctionalShowcase />
       <Support />
-      <FunctionalTraining />
-      <DownloadApp />
+      <Carousel />
+      {/* <AboutRayEntry />
+       */}
+      {/* <FunctionalTraining /> */}
+      {/* <DownloadApp /> */}
+      {/* <AppShowcase /> */}
     </>
   );
 }

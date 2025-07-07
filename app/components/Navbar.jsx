@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import Logo from "./Logo";
 import TopBar from "./TopBar";
@@ -56,10 +56,11 @@ export default function Navbar() {
   const navLinks = [
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Functional Training", href: "/ft" },
+    { name: "Functional / Group Training", href: "/ft" },
     { name: "Merch", href: "/merch" },
     { name: "News & Events", href: "/news" },
     { name: "Career", href: "/career" },
+    { name: "Our Space", href: "/space" },
   ];
 
   return (
@@ -105,7 +106,7 @@ export default function Navbar() {
                                   alt={title}
                                   width={200}
                                   height={100}
-                                  className="w-full h-24 object-cover rounded mb-2 grayscale "
+                                  className="w-full h-24 object-cover rounded mb-2"
                                 />
                                 <h3 className="font-semibold text-sm mb-1 hover:underline">
                                   {title}
@@ -149,7 +150,7 @@ export default function Navbar() {
                 onClick={() => setSidebarOpen(true)}
                 className="text-white text-3xl focus:outline-none"
               >
-                <HiOutlineMenu />
+                <HiOutlineMenuAlt4 className="opacity-80" />
               </button>
             </div>
           </div>
@@ -174,14 +175,14 @@ export default function Navbar() {
         </div>
 
         {/* Sidebar Nav Links */}
-        <nav className="flex flex-col p-4 space-y-4 font-semibold mt-12">
+        <nav className="flex flex-col p-4 space-y-4 font-semibold mt-16">
           {navLinks.map((link) => {
             if (link.name === "Services") {
               return (
-                <div key={link.name} className="flex flex-col">
+                <div key={link.name} className="flex flex-col mb-3">
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
-                    className="flex items-center justify-between w-full hover:text-gray-300 transition text-sm sm:text-base md:text-lg font-semibold uppercase focus:outline-none"
+                    className="flex mb-3 items-center justify-between w-full hover:text-gray-300 transition text-sm sm:text-base md:text-lg font-semibold uppercase focus:outline-none"
                     aria-expanded={servicesOpen}
                   >
                     {link.name}
@@ -198,7 +199,7 @@ export default function Navbar() {
                           key={title}
                           href={href}
                           onClick={() => setSidebarOpen(false)}
-                          className="hover:text-gray-300 transition text-sm sm:text-base md:text-lg hover:underline"
+                          className="hover:text-gray-300 mb-3 transition text-sm sm:text-base md:text-lg hover:underline"
                         >
                           {title}
                         </Link>
@@ -213,7 +214,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setSidebarOpen(false)}
-                  className="hover:text-gray-300 transition text-sm sm:text-base md:text-lg uppercase"
+                  className="hover:text-gray-300 mb-5 transition text-sm sm:text-base md:text-lg uppercase"
                 >
                   {link.name}
                 </Link>
@@ -223,7 +224,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setSidebarOpen(false)}
-            className="px-4 py-1.5 border border-white rounded uppercase hover:bg-white hover:text-black transition text-sm sm:text-base md:text-lg"
+            className="px-10 py-1.5 w-max rounded uppercase bg-white text-black transition text-sm sm:text-base md:text-lg"
           >
             Contact Us
           </Link>
