@@ -1,8 +1,9 @@
 function Head() {
   return (
     <head>
-      <link rel="icon" href="/favicon/favicon.ico" />
-      <link
+      <link rel="icon" href="/images/circle-logo.PNG" type="image/png" />
+      {/* <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> */}
+      {/* <link
         rel="icon"
         type="image/png"
         sizes="32x32"
@@ -19,7 +20,7 @@ function Head() {
         sizes="180x180"
         href="/favicon/apple-touch-icon.png"
       />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
+      <link rel="manifest" href="/favicon/site.webmanifest" /> */}
       <meta name="theme-color" content="#000000" />
     </head>
   );
