@@ -10,15 +10,8 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "Functional Training",
-    image: "/images/asset11.jpg",
-    description:
-      "Focuses on building strength, stability, and mobility that directly improves the way you move...",
-    href: "/services/functional-training",
-  },
-  {
     title: "Youth Soccer Training",
-    image: "/images/asset2.jpg",
+    image: "/images/asset7.jpg",
     description:
       "Our youth soccer training is built to help young players get stronger, faster, and more confident...",
     href: "/services/youth-soccer-training",
@@ -29,6 +22,13 @@ const services = [
     description:
       "We occasionally host soccer camps and special events focused on skill development and team-building...",
     href: "/services/soccer-camps-events",
+  },
+  {
+    title: "Functional / Group Training",
+    image: "/images/slider/slider5.jpg",
+    description:
+      "Focuses on building strength, stability, and mobility that directly improves the way you move...",
+    href: "/services/functional-training",
   },
   {
     title: "Personal Training",
@@ -56,11 +56,10 @@ export default function Navbar() {
   const navLinks = [
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Functional / Group Training", href: "/ft" },
+    { name: "Our Space", href: "/space" },
     { name: "Merch", href: "/merch" },
     { name: "News & Events", href: "/news" },
     { name: "Career", href: "/career" },
-    { name: "Our Space", href: "/space" },
   ];
 
   return (

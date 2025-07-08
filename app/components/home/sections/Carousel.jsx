@@ -27,16 +27,16 @@ function Carousel() {
   const goToSlide = (index) => setCurrentIndex(index);
 
   return (
-    <main className="bg-white min-h-screen py-12">
+    <main className="bg-white h-full py-12">
       {/* Section Header */}
-      <div className="text-center mb-6">
+      {/* <div className="text-center mb-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 uppercase tracking-wide">
           Our Collections
         </h2>
-      </div>
+      </div> */}
 
       {/* Carousel */}
-      <div className="w-full relative overflow-hidden max-w-5xl mx-auto">
+      <div className="w-full relative overflow-hidden">
         {/* Image */}
         <div className="relative h-[300px] sm:h-[400px] md:h-[500px]">
           <Image

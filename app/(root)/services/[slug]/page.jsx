@@ -1,10 +1,10 @@
-import Entry from "@/app/components/Entry";
+import Entry from "../../../components/Entry";
 import { notFound } from "next/navigation";
 import { FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 
 const services = [
   {
-    title: "Functional Training",
+    title: "Functional / Group Training",
     slug: "functional-training",
     subtitle: "Strength & Mobility",
     description:
@@ -12,7 +12,7 @@ const services = [
     quote:
       "NO EXPERIENCE NEEDED. JUST SHOW UP, BE READY TO WORK, AND WE'LL GUIDE YOU EVERY STEP OF THE WAY.",
     cta: "BOOK YOUR FIRST SESSION",
-    img: "/images/asset11.jpg",
+    img: "/images/slider/slider4.jpg",
     highlights: [],
   },
   {
@@ -81,7 +81,7 @@ const services = [
     quote:
       "WHETHER YOU'RE NEW TO TRAINING OR LOOKING TO LEVEL UP, YOU'LL GET CONSISTENT SUPPORT AND GUIDANCE...",
     cta: null,
-    img: "/images/asset13.jpg",
+    img: "/images/asset10.jpg",
     highlights: [
       "Personalized fitness and nutrition guidance",
       "Goal-specific programming (weight loss, strength, athletic performance, recovery, etc.)",

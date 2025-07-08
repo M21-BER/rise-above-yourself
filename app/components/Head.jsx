@@ -1,7 +1,7 @@
 function Head() {
   return (
     <head>
-      <link rel="icon" href="/images/circle-logo.PNG" type="image/png" />
+      <link rel="icon" href="/images/circle-logo-white.PNG" type="image/png" />
       {/* <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> */}
       {/* <link
         rel="icon"

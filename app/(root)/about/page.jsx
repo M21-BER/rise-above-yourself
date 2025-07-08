@@ -1,4 +1,4 @@
-import Entry from "@/app/components/Entry";
+import Entry from "../../components/Entry";
 import FounderSection from "./Founder";
 import MissionSlider from "./MissionSlider";
 

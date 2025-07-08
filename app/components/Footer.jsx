@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Left: Logo */}
           <div className="flex justify-start  mb-5 md:mb-0  static md:absolute top-0 left-0">
             <Image
-              src="/images/circle-logo.PNG"
+              src="/images/circle-logo-black.PNG"
               alt="Ray Athletics Logo"
               width={80}
               height={60}

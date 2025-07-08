@@ -28,7 +28,7 @@ function Hero() {
     // Start 5-second splash timer
     timerRef.current = setTimeout(() => {
       setShowVideo(true);
-    }, 5000);
+    }, 2000);
 
     return () => clearTimeout(timerRef.current);
   }, []);

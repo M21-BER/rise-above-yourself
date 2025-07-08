@@ -17,23 +17,23 @@ export default function Brand() {
   }, []);
 
   const imageVariants = {
-    hidden: { x: "-100%", opacity: 0 },
+    hidden: { opacity: 0 },
     visible: {
-      x: 0,
       opacity: 1,
-      transition: { type: "spring", stiffness: 60, damping: 15 },
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
     },
   };
 
   const textVariants = {
-    hidden: { x: "100%", opacity: 0 },
+    hidden: { opacity: 0 },
     visible: {
-      x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 60,
-        damping: 15,
+        duration: 1,
+        ease: "easeInOut",
         delay: 0.3,
       },
     },

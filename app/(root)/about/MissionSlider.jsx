@@ -12,7 +12,7 @@ const slides = [
       <>
         To empower people to take control of their bodies through intentional
         movement that
-        <span className="text-[#D00A02] font-semibold italic">
+        <span>
           {" "}
           builds strength, control, and confidence starting with what they
           already have.
@@ -85,21 +85,57 @@ export default function MissionSection() {
             className="object-cover grayscale"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70  z-5" />
         </motion.div>
       </AnimatePresence>
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center text-white">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase font-display tracking-wider mb-4">
-          {title}
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-3xl mb-6 leading-relaxed">
-          {content}
-        </p>
-        <p className="italic text-gray-400 text-xs sm:text-sm md:text-base max-w-xl">
-          “{sub}”
-        </p>
+      {/* <div className="relative z-30 flex flex-col items-center justify-center h-full px-6 text-center text-white">
+        <div className="group bg-white/0 hover:bg-white transition-all duration-500 ease-in-out rounded-2xl py-6 px-4 flex flex-col items-center text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase font-display tracking-wider mb-6 transition-colors duration-500 group-hover:text-black">
+            {title}
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-4xl mb-8 leading-relaxed transition-colors duration-500 group-hover:text-gray-800">
+            {content}
+          </p>
+          <p className="italic text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl transition-colors duration-500 group-hover:text-red-600">
+            “{sub}”
+          </p>
+        </div>
+      </div> */}
+
+      <div className="relative z-30 flex flex-col items-center justify-center h-full px-6 text-center text-white">
+        <div
+          className="group 
+               bg-white 
+               sm:bg-transparent 
+               hover:bg-white 
+               transition-all duration-500 ease-in-out 
+               rounded-2xl py-6 px-4 
+               flex flex-col items-center text-white"
+        >
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase font-display tracking-wider mb-6 
+                 transition-colors duration-500 
+                 text-black sm:text-white group-hover:text-black"
+          >
+            {title}
+          </h2>
+          <p
+            className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mb-8 leading-relaxed 
+                 transition-colors duration-500 
+                 text-gray-800 sm:text-white group-hover:text-gray-800"
+          >
+            {content}
+          </p>
+          <p
+            className="italic font-bold max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl 
+                 transition-colors duration-500 
+                 text-red-600 sm:text-white group-hover:text-red-600"
+          >
+            “{sub}”
+          </p>
+        </div>
       </div>
 
       {/* Manual Controls */}
