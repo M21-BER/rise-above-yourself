@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 const newsItems = [
   {
     id: "2",
-    title: "Ray Athletics Launches with a New Vision for Fitness",
+    title:
+      "R.A.Y. Athletics Opens New Performance Gym in Virginia Grand Opening Celebration Coming Soon",
     content:
       "Ray Athletics is redefining personal performance with a smart, motivational, and athlete-first approach. Watch our launch series to learn more.",
     image: "/images/slider/slider5.jpg",
@@ -34,27 +35,61 @@ export default async function NewsDetailPage({ params }) {
       <p className="text-sm text-gray-200 mb-10">{newsItem.date}</p>
 
       <section className="prose prose-invert prose-lg max-w-none">
-        <p>
-          In the heart of a vibrant coastal town, where the salty breeze carries
-          ambition and grit, Ray Athletics opens its doors as more than just a
-          gym — it’s a movement. Built for those chasing transformation,
-          confidence, and high-performance living, Ray combines functional
-          fitness, youth development, and personal coaching to create a space
-          where everyone feels empowered. Whether it’s James rediscovering his
-          athleticism in group training, Mia gaining confidence through our
-          youth soccer program, or Emily rebuilding strength after injury with
-          personalized support, every story at Ray starts with a single promise:
-          you belong here.
+        <p className="text-base md:text-lg text-gray-300">
+          R.A.Y. Athletics is proud to announce the opening of its new
+          performance gym in Virginia. The space is now officially open and
+          welcoming youth and adult athletes for structured, intentional
+          training rooted in discipline, soccer, and community. Founded by
+          athlete and coach Rediet Berihun, R.A.Y. Athletics offers a unique
+          training model that blends indoor gym work with outdoor field
+          development. Built with a focus on both personal growth and athletic
+          performance, the gym provides a home for athletes at every stage.
+          Programs include functional group training for adults, one-on-one
+          personal coaching, youth soccer development, and field and gym
+          integration for total-body performance.
         </p>
-        <p>
-          As we launch Ray Athletics, we invite our community to join a culture
-          where results meet resilience and encouragement meets expertise. From
-          summer soccer camps filled with laughter and teamwork, to one-on-one
-          coaching designed to unlock your full potential, our mission is simple
-          — meet you where you are, and push you where you want to be. No matter
-          your age, background, or fitness level, now is your moment. The
-          journey starts today — and we're here for every step of it.
+
+        <p className="text-base md:text-lg text-gray-300 mt-4">
+          With a grand opening celebration coming soon, R.A.Y. Athletics invites
+          the community to come experience a space built on consistency,
+          accountability, and culture. Whether you're a parent looking for a
+          program that balances structure and skill for your child, or an adult
+          looking to recommit to your fitness, this gym was created to meet you
+          where you are and help you go further.
         </p>
+        <div className="text-base md:text-lg text-gray-300 mt-4 space-y-2">
+          <p>For more information, please contact</p>
+
+          <p>
+            <span className="text-white">Call or Text</span>{" "}
+            <a
+              href="tel:+16194047752"
+              className="underline text-red-200 hover:text-red-100"
+            >
+              +1 (619) 404-7752
+            </a>
+          </p>
+
+          <p>
+            <span className="text-white">Instagram:</span>{" "}
+            <a
+              href="https://instagram.com/rayathletics__"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-red-200 hover:text-red-100"
+            >
+              @rayathletics__
+            </a>
+          </p>
+
+          <p className="text-white">Location:</p>
+          <p className="text-red-200 hover:text-red-100">
+            5649L General Washington Dr.
+          </p>
+          <p className="text-red-200 hover:text-red-100">
+            Alexandria, Virginia
+          </p>
+        </div>
       </section>
 
       {/* YouTube Videos */}

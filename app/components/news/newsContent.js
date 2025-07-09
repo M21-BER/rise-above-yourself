@@ -4,7 +4,7 @@ export const newsContent = [
     title: "Ray Athletics Launches with a New Vision for Fitness",
     excerpt:
       "Ray Athletics is redefining personal performance with a smart, motivational, and athlete-first approach. Explore our new platform through an exclusive video series.",
-    image: "/images/news.PNG",
+    image: "/images/news.png",
     date: "2025-07-09",
   },
 ];

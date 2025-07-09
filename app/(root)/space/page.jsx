@@ -6,7 +6,7 @@ export default function Space() {
       {/* <div className="bg-transparent h-24 w-full"></div> */}
       <section className="w-full h-screen flex">
         {/* Left side: Vertical rotated header */}
-        <div className="w-12 sm:w-16 md:w-20 flex flex-col items-center justify-center bg-transparent space-y-1">
+        {/* <div className="w-12 sm:w-16 md:w-20 flex flex-col items-center justify-center bg-transparent space-y-1">
           {"Our Space".split("").map((char, i) =>
             char === " " ? (
               <div key={i} className="h-4"></div> // space between words
@@ -19,7 +19,7 @@ export default function Space() {
               </span>
             )
           )}
-        </div>
+        </div> */}
 
         {/* Right side: Image + Overlay */}
         <div className="relative flex-1 w-full h-full">
