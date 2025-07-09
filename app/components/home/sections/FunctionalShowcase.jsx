@@ -6,15 +6,8 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Functional Training",
-    image: "/images/asset11.jpg",
-    description:
-      "Focuses on building strength, stability, and mobility that directly improves the way you move...",
-    href: "/services/functional-training",
-  },
-  {
     title: "Youth Soccer Training",
-    image: "/images/asset2.jpg",
+    image: "/images/slider/slider2.jpg",
     description:
       "Our youth soccer training is built to help young players get stronger, faster, and more confident...",
     href: "/services/youth-soccer-training",
@@ -26,6 +19,14 @@ const services = [
       "We occasionally host soccer camps and special events focused on skill development and team-building...",
     href: "/services/soccer-camps-events",
   },
+  {
+    title: "Functional / Group Training",
+    image: "/images/slider/slider4.jpg",
+    description:
+      "Focuses on building strength, stability, and mobility that directly improves the way you move...",
+    href: "/services/functional-training",
+  },
+
   {
     title: "Personal Training",
     image: "/images/asset5.jpg",
@@ -82,10 +83,10 @@ const FunctionalShowcase = () => {
                   <Link
                     href={service.href}
                     title={`Discover ${service.title}`}
-                    className={`text-sm font-semibold ${
+                    className={`text-sm font-semibold underline ${
                       isActive
-                        ? "text-blue-600 hover:text-blue-400"
-                        : "text-white hover:text-blue-400"
+                        ? "text-red-600 hover:text-red-400"
+                        : "text-white hover:text-red-400"
                     }`}
                   >
                     Discover {service.title}

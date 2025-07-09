@@ -1,12 +1,18 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {};
-
-// export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: false, // Disable Turbopack
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "gymleco.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

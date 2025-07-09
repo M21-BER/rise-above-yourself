@@ -3,9 +3,9 @@ import React from "react";
 
 const Support = () => {
   return (
-    <section className="w-full bg-background text-white">
+    <section className="w-full bg-white text-black">
       {/* Full width image with fixed height, no border radius or padding */}
-      <div className="relative w-full h-[40vh] md:h-[50vh]">
+      {/* <div className="relative w-full h-[40vh] md:h-[50vh]">
         <Image
           src="/images/gym-image4.jpg"
           alt="Travel"
@@ -13,10 +13,10 @@ const Support = () => {
           className="object-cover"
           priority
         />
-      </div>
+      </div> */}
 
       {/* Text container below image, centered */}
-      <div className="max-w-xl mx-auto text-center px-4 py-8 md:py-12">
+      <div className="max-w-xl mx-auto text-center px-4 py-8 md:py-20">
         {/* Gradient underline */}
         <div className="w-20 h-1 mb-6 mx-auto rounded grad"></div>
 
@@ -24,7 +24,7 @@ const Support = () => {
           More than a Gym
         </h2>
 
-        <p className=" text-sm sm:text-sm md:text-base lg:text-lg  2xl:text-xl text-white mb-3">
+        <p className=" text-sm sm:text-sm md:text-base lg:text-lg  2xl:text-xl text-black mb-3">
           Ray Athletics is a performance training center founded by athlete and
           coach Rediet Berihun. Built from the ground up, it’s focused on
           functional movement, soccer development, and helping people train with

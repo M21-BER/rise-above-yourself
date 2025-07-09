@@ -20,9 +20,9 @@ const AppShowcase = () => {
           animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div style={{ width: 200, height: 500, position: "relative" }}>
+          <div style={{ width: 150, height: 450, position: "relative" }}>
             <Image
-              src="/images/app.png"
+              src="/images/dark.PNG"
               alt="App mockup 2"
               fill
               className="rounded-xl shadow-2xl object-cover h-auto"
@@ -31,8 +31,38 @@ const AppShowcase = () => {
                 WebkitBoxReflect:
                   "below -70px linear-gradient(transparent, transparent, #0004)",
                 transformOrigin: "center",
-                WebkitTransform: "perspective(800px) rotateY(35deg)",
-                transform: "perspective(800px) rotateY(35deg)",
+                WebkitTransform: "perspective(800px) rotateY(-30deg)",
+                transform: "perspective(800px) rotateY(-30deg)",
+                transition: "all 2s linear 100ms",
+                opacity: 1,
+              }}
+            />
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div
+            style={{
+              width: 150,
+              height: 450,
+              position: "relative",
+            }}
+          >
+            <Image
+              src="/images/light.PNG"
+              alt="App mockup 2"
+              fill
+              className="rounded-xl shadow-2xl object-cover h-auto"
+              style={{
+                objectFit: "contain",
+                WebkitBoxReflect:
+                  "below -70px linear-gradient(transparent, transparent, #0004)",
+                transformOrigin: "center",
+                WebkitTransform: "perspective(800px) rotateY(30deg)",
+                transform: "perspective(800px) rotateY(30deg)",
                 transition: "all 2s linear 100ms",
                 opacity: 1,
               }}
@@ -51,7 +81,7 @@ const AppShowcase = () => {
           Take your training, progress, and motivation wherever you go.
         </p>
 
-        <p className="text-2xl font-semibold mb-8">
+        <p className="text-2xl text-center md:text-left font-semibold mb-8">
           Download the R.A.Y Athletics App.
         </p>
 

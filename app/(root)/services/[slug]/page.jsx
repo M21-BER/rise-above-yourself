@@ -6,15 +6,28 @@ const services = [
   {
     title: "Functional / Group Training",
     slug: "functional-training",
-    subtitle: "Strength & Mobility",
+    subtitle: "High-impact workouts. Real results. No intimidation.",
     description:
-      "Focuses on building strength, stability, and mobility that directly improves the way you move...",
+      "Our group training sessions combine strength, conditioning, and mobility to help you feel stronger, move better, and stay consistent. Whether you're a beginner or experienced, our coaches meet you where you are and push you to grow.",
     quote:
-      "NO EXPERIENCE NEEDED. JUST SHOW UP, BE READY TO WORK, AND WE'LL GUIDE YOU EVERY STEP OF THE WAY.",
-    cta: "BOOK YOUR FIRST SESSION",
+      "NO MATTER YOUR STARTING POINT, YOU'LL BE CHALLENGED, SUPPORTED, AND MOTIVATED EVERY STEP OF THE WAY.",
+    cta: null,
     img: "/images/slider/slider4.jpg",
-    highlights: [],
+    highlights: [
+      "Full-body functional training",
+      "Focus on core, stability, and real-life movement",
+      "Low-equipment, high-performance approach",
+      "Modifications for all fitness levels",
+      "A supportive, non-judgmental community",
+    ],
+    scheduleNote: "⏰ Classes available mornings, evenings, and weekends.",
+    contact: {
+      note: "Ready to start?",
+      phone: "+1 (619) 404-7752",
+      action: "Book your first session or consultation call today",
+    },
   },
+
   {
     title: "Youth Soccer Training",
     slug: "youth-soccer-training",
@@ -47,30 +60,6 @@ const services = [
     quote: "WE ANNOUNCE ALL UPCOMING CAMPS ON OUR SOCIAL MEDIA AND WEBSITE...",
     img: "/images/asset1.jpg",
     highlights: [],
-  },
-  {
-    title: "Group Training",
-    slug: "group-training",
-    subtitle: "High-impact workouts. Real results. No intimidation.",
-    description:
-      "Our group training sessions combine strength, conditioning, and mobility to help you feel stronger, move better, and stay consistent. Whether you're a beginner or experienced, our coaches meet you where you are and push you to grow.",
-    quote:
-      "NO MATTER YOUR STARTING POINT, YOU'LL BE CHALLENGED, SUPPORTED, AND MOTIVATED EVERY STEP OF THE WAY.",
-    cta: null,
-    img: "/images/asset11.jpg",
-    highlights: [
-      "Full-body functional training",
-      "Focus on core, stability, and real-life movement",
-      "Low-equipment, high-performance approach",
-      "Modifications for all fitness levels",
-      "A supportive, non-judgmental community",
-    ],
-    scheduleNote: "⏰ Classes available mornings, evenings, and weekends.",
-    contact: {
-      note: "Ready to start?",
-      phone: "+1 (619) 404-7752",
-      action: "Book your first session or consultation call today",
-    },
   },
   {
     title: "Personal Training",
@@ -166,14 +155,14 @@ export default async function ServicePage({ params }) {
 
             {/* Quote */}
             {service.quote && (
-              <blockquote className="border-l-4 border-white pl-4 italic text-gray-300 font-semibold text-base md:text-lg">
+              <blockquote className="border-l-4 border-red-600 pl-4 italic text-gray-300 font-semibold text-base md:text-lg">
                 {service.quote}
               </blockquote>
             )}
 
             {/* Schedule Note */}
             {service?.scheduleNote && (
-              <p className="text-yellow-400 font-medium text-base md:text-lg">
+              <p className="text-red-400 font-medium text-base md:text-lg">
                 {service.scheduleNote}
               </p>
             )}
