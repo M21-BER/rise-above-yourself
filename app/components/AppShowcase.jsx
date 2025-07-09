@@ -22,7 +22,7 @@ const AppShowcase = () => {
         >
           <div style={{ width: 150, height: 450, position: "relative" }}>
             <Image
-              src="/images/dark.PNG"
+              src="/images/dark.png"
               alt="App mockup 2"
               fill
               className="rounded-xl shadow-2xl object-cover h-auto"
@@ -52,7 +52,7 @@ const AppShowcase = () => {
             }}
           >
             <Image
-              src="/images/light.PNG"
+              src="/images/light.png"
               alt="App mockup 2"
               fill
               className="rounded-xl shadow-2xl object-cover h-auto"
