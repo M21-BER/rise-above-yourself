@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head />
+      {/* <body className={`flex min-h-screen flex-col`}> */}
       <body
         className={`flex min-h-screen flex-col ${bidsak.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
       >

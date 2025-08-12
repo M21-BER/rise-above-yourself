@@ -7,6 +7,7 @@ import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import Logo from "./Logo";
 import TopBar from "./TopBar";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 
 const services = [
   {
@@ -54,12 +55,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Our Space", href: "/space" },
-    { name: "Merch", href: "/merch" },
+    { name: "Shop", href: "/merch" },
     { name: "News & Events", href: "/news" },
-    { name: "Career", href: "/career" },
+    { name: "Download Our App", href: "/app" },
   ];
 
   return (
@@ -68,89 +69,47 @@ export default function Navbar() {
         <TopBar />
         <div className="max-w-[1300px] mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            {/* Logo on left */}
-            <Link href="/" className="flex-shrink-0">
-              <Logo />
-            </Link>
-
-            {/* Desktop Nav on right */}
-            <div className="hidden xl:flex items-center space-x-8 font-semibold">
-              {/* Links */}
-              <div className="flex space-x-6 relative">
-                {navLinks.map((link) => {
-                  if (link.name === "Services") {
-                    return (
-                      <div key={link.name} className="relative group pb-2">
-                        <div className="uppercase transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg cursor-pointer">
-                          {/* Underline only on text hover */}
-                          <span className="hover:opacity-50">{link.name}</span>
-                        </div>
-
-                        {/* Dropdown content */}
-                        <div
-                          className="absolute left-0 top-full mt-0 w-[480px] bg-white text-black rounded shadow-lg
-                          opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto
-                          transition-opacity duration-300 z-50 p-4 grid grid-cols-2 gap-4 border border-gray-200"
-                        >
-                          {services.map(
-                            ({ title, image, description, href }) => (
-                              <Link
-                                key={title}
-                                href={href}
-                                className="flex flex-col bg-gray-50 rounded hover:bg-gray-100 border border-transparent hover:border-[rgba(0,0,0,0.1)] transition p-2 cursor-pointer"
-                                onClick={() => setSidebarOpen(false)} // just in case
-                              >
-                                <Image
-                                  src={image}
-                                  alt={title}
-                                  width={200}
-                                  height={100}
-                                  className="w-full h-24 object-cover rounded mb-2"
-                                />
-                                <h3 className="font-semibold text-sm mb-1 hover:underline">
-                                  {title}
-                                </h3>
-                                <p className="text-xs text-gray-700 line-clamp-3">
-                                  {description}
-                                </p>
-                              </Link>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    );
-                  } else {
-                    return (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="uppercase transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg hover:opacity-50"
-                      >
-                        {link.name}
-                      </Link>
-                    );
-                  }
-                })}
-              </div>
-
-              {/* CTA Button */}
-              <Link
-                href="/contact"
-                className="px-4 py-1.5 grad rounded uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
-              >
-                Contact Us
-              </Link>
-            </div>
-
-            {/* Hamburger menu on mobile */}
-            <div className="xl:hidden">
+            <div className="flex flex-row gap-5 justify-between w-full lg:justify-start lg:w-fit">
               <button
                 aria-label="Open menu"
                 onClick={() => setSidebarOpen(true)}
-                className="text-white text-3xl focus:outline-none"
+                className="text-white text-3xl focus:outline-none cursor-pointer"
               >
-                <HiOutlineMenuAlt4 className="opacity-80" />
+                <Menu className="opacity-80" />
               </button>
+
+              <Link href="/" className="flex-shrink-0">
+                <Logo />
+              </Link>
+            </div>
+
+            {/* Desktop Nav on right */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <Link
+                href="/contact"
+                className="
+    px-5 py-2 
+    border-2 border-white/80 
+    rounded-full 
+    text-white 
+    uppercase 
+    text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg
+    outline-none 
+    focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2
+    hover:opacity-70 hover:scale-105 
+    transition 
+    duration-300 ease-in-out
+    shadow-sm
+  "
+              >
+                Locations
+              </Link>
+              <Link
+                href="/contact"
+                className="px-4 py-1.5 grad rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
@@ -158,9 +117,9 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full bg-black text-white z-60 transform transition-transform duration-500 ease-in-out
-        ${sidebarOpen ? "translate-x-0" : "translate-x-full"}
-        w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/3 xl:w-1/4`}
+        className={`fixed top-0 left-0 h-full grad text-white z-60 transform transition-transform duration-500 ease-in-out
+    ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+    w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/3 xl:w-1/4`}
       >
         {/* Close Button */}
         <div className="p-4 absolute top-0 left-0">
@@ -223,7 +182,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setSidebarOpen(false)}
-            className="px-10 py-1.5 w-max rounded uppercase bg-white text-black transition text-sm sm:text-base md:text-lg"
+            className="px-10 py-1.5 w-max rounded-full uppercase bg-white text-black transition text-sm sm:text-base md:text-lg"
           >
             Contact Us
           </Link>
