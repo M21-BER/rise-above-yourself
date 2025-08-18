@@ -1,10 +1,9 @@
-import { Allerta_Stencil, DM_Sans } from "next/font/google";
-import localFont from "next/font/local";
-import Navbar from "./components/Navbar";
 import "./globals.css";
-import Head from "./components/Head";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import { Providers } from "./providers";
+import localFont from "next/font/local";
+import { Allerta_Stencil, DM_Sans, Cinzel } from "next/font/google";
 const bidsak = localFont({
   src: "./fonts/Bisdak.ttf",
   display: "swap",
@@ -21,6 +20,10 @@ const dm_sans = DM_Sans({
   variable: "--font-dm_sans",
   subsets: ["latin"],
 });
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Rise Above Yourself",
@@ -31,14 +34,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head />
-      {/* <body className={`flex min-h-screen flex-col`}> */}
+      <head>
+        <link
+          rel="icon"
+          href="/images/circle-logo-white.PNG"
+          type="image/png"
+        />
+        <meta name="theme-color" content="#000000" />
+      </head>
+      {/* <body className={`flex  min-h-screen flex-col`}> */}
       <body
-        className={`flex min-h-screen flex-col ${bidsak.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
+        className={`flex  min-h-screen flex-col ${bidsak.variable} ${cinzel.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
       >
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

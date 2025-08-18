@@ -53,7 +53,7 @@ function Landing() {
     });
   };
   return (
-    <div className="w-full h-screen bg-white flex flex-col">
+    <div className="w-full h-screen bg-white pt-14 sm:pt-20 flex flex-col">
       <div className="relative w-full h-[85%] pb-20">
         <video
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${

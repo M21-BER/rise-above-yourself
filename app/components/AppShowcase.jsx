@@ -1,10 +1,11 @@
 "use client";
-
 import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import useMountedTranslation from "@/hook/useMountedTranslation";
 
 const AppShowcase = () => {
+  const { t, mounted } = useMountedTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px" });
 
@@ -73,16 +74,16 @@ const AppShowcase = () => {
 
       {/* Text Section */}
       <div className="flex-1/2 text-white p-10">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 w-full md:w-fit tracking-wide border border-white/20 px-4 py-2 text-center rounded-t-lg">
-          Mobile App
+        <h1 className="text-4xl font-cinzel uppercase md:text-5xl font-extrabold mb-6 w-full md:w-fit tracking-wide border border-white/20 px-4 py-2 text-center rounded-t-lg">
+          {mounted && <span>{t("mobile.title")}</span>}
         </h1>
 
         <p className="text-gray-300 text-lg mb-4">
-          Take your training, progress, and motivation wherever you go.
+          {mounted && <span>{t("mobile.desc")}</span>}
         </p>
 
-        <p className="text-2xl text-center md:text-left font-semibold mb-8">
-          Download the R.A.Y Athletics App.
+        <p className="text-2xl font-cinzel text-center uppercase md:text-left font-semibold mb-8">
+          {mounted && <span>{t("mobile.subtitle")}</span>}
         </p>
 
         <div className="flex flex-wrap gap-6 justify-center md:justify-start items-center">

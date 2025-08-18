@@ -1,0 +1,147 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "service": "Servicios",
+        "shop": "Tienda",
+        "news": "Noticias y Eventos",
+        "app": "Descarga Nuestra App"
+    },
+    "languages": {
+        "en": "Inglés",
+        "es": "Español",
+        "am": "Amárico",
+        "lang": "Idioma"
+    },
+    "training": {
+        "youth": "Entrenamiento de Fútbol Juvenil",
+        "youth_description": "Obtén una ventaja volviéndote más rápido, más fuerte y más ágil.",
+        "group": "Entrenamiento Personal/Grupal",
+        "group_description": "Diseñado para ayudarle a moverse libremente y desarrollar fuerza."
+    },
+    "location": "Ubicaciones",
+    "contact": "Contáctanos",
+    "logo_title": "Atletismo R.A.Y",
+    "logo_subtitle": "ELEVATE POR ENCIMA DE TI MISMO",
+    "lang": "Idioma",
+    "more_than_gym_section": {
+        "more_than_gym_title": "Más que un Gimnasio",
+        "more_than_gym_desc": "Ray Athletics es un centro de entrenamiento de alto rendimiento fundado por la atleta y entrenadora Rediet Berihu. Fundado desde cero, se centra en el movimiento funcional, el desarrollo del fútbol y en ayudar a las personas a entrenar con disciplina y propósito.",
+        "more_than_gym_footer": "Desde los jugadores jóvenes hasta los adultos, aquí es donde se forman los verdaderos atletas."
+    },
+    "process_section": {
+        "title": "EL PROCESO",
+        "desc": "Así es como se ve día a día."
+    },
+    "mobile": {
+        "title": "Aplicación Móvil",
+        "desc": "Lleva tu entrenamiento, progreso y motivación a dondequiera que vayas.",
+        "subtitle": "Descarga la App de R.A.Y Athletics."
+    },
+    "footer": {
+        "quote": "Un entrenador profesional crecerá contigo.",
+        "address": "Dirección",
+        "help": "Ayuda",
+        "info": "¿Buscas información?",
+        "news": "Recibe las últimas noticias",
+        "work": "Trabaja con nosotros",
+        "quick": "Enlaces rápidos",
+        "contact": "Contacto"
+    },
+    "location_page": {
+        "upcoming": "Próximos eventos",
+        "events": "eventos",
+        "desc": "Consulta nuestros últimos perfiles de jugadores y eventos que suceden cerca de ti.",
+        "mon": "Lunes",
+        "fri": "Viernes"
+    },
+    "contact_page": {
+        "talk": "Hablemos",
+        "name": "Nombre",
+        "enter_name": "Tu nombre completo",
+        "email": "Correo electrónico",
+        "enter_email": "tucorreo@ejemplo.com",
+        "message": "Mensaje",
+        "enter_message": "Escribe tu mensaje aquí...",
+        "send": "Enviar mensaje"
+    },
+    "about_page": {
+        "title": "SOBRE R.A.Y ATHLETICS",
+        "desc": "Lo que comenzó con sesiones de fútbol uno a uno en parques y entradas de casas se ha convertido en un centro de entrenamiento completo basado en la consistencia, el propósito y un profundo amor por el juego.",
+        "list": {
+            "consistency": {
+                "title": "Consistencia",
+                "desc": "Nos presentamos — no solo cuando es emocionante, sino especialmente cuando no lo es."
+            },
+            "effort": {
+                "title": "Esfuerzo",
+                "desc": "No tienes que ser el mejor. Solo tienes que intentarlo — totalmente y de verdad."
+            },
+            "respect": {
+                "title": "Respeto",
+                "desc": "Tratamos a las personas, el espacio y el trabajo con cuidado. Eso no es negociable."
+            },
+            "responsibility": {
+                "title": "Responsabilidad",
+                "desc": "Tomas control de tu cuerpo, tu progreso y tu energía. Nadie puede hacerlo por ti."
+            },
+            "presence": {
+                "title": "Presencia",
+                "desc": "Entrenamos duro, pero también disfrutamos estar aquí. Buenas personas, buena energía — eso también importa."
+            }
+        },
+        "founded": "Fundado por",
+        "founder": "Reddiet Berihun",
+        "par1": "Ray Athletics comenzó con la pasión de nuestro fundador por el fútbol. Desde el principio, fue más que un deporte; fue su enfoque, su disciplina y la forma en que se conectaba con otros. Comenzó entrenando niños en parques locales y entradas, haciendo lo que podía para ayudarles a moverse mejor y jugar más fuerte.",
+        "par2": "Con el tiempo, esas sesiones crecieron hasta convertirse en un programa de entrenamiento completo. Lo que comenzó con fútbol se convirtió en un espacio para que jóvenes y adultos entrenen con propósito, construyendo fuerza, consistencia y confianza en el camino."
+    },
+    "youth_page": {
+        "title": "Entrenamiento de fútbol juvenil",
+        "li1": "Mejorar velocidad y rapidez",
+        "li2": "Desarrollar resistencia y stamina",
+        "li3": "Mejorar control de balón y técnica",
+        "li4": "Desarrollar conciencia táctica",
+        "li5": "Incrementar fuerza y potencia",
+        "li6": "Mejorar equilibrio y coordinación",
+        "book": "Reserva tu primera clase",
+        "desc": "Ya sea uno a uno o en un grupo pequeño, cada sesión está estructurada para ayudarte a tomar control de tu cuerpo y construir hábitos duraderos. El objetivo no es solo ejercitarse, sino hacer del movimiento parte de tu estilo de vida.",
+        "list": {
+            "technique": {
+                "title": "Técnica",
+                "text": "Dominar el control del balón, pases, regate y tiros ayuda a los jóvenes jugadores a ganar confianza y jugar de manera más inteligente en el campo."
+            },
+            "speed": {
+                "title": "Velocidad",
+                "text": "La velocidad significa moverse rápido y de manera eficiente. Ayuda a los jugadores a llegar al balón más rápido y mantenerse al ritmo del juego."
+            },
+            "agility": {
+                "title": "Agilidad",
+                "text": "La agilidad consiste en cambiar de dirección rápidamente y mantenerse equilibrado, para que los jugadores puedan esquivar a los oponentes y reaccionar con facilidad."
+            }
+        }
+    },
+    "group_page": {
+        "title": "Entrenamiento de grupo/personal",
+        "li1": "Construir fuerza y músculo",
+        "li2": "Mejorar rendimiento atlético",
+        "li3": "Apoyar objetivos de pérdida de peso",
+        "li4": "Aumentar resistencia y energía",
+        "li5": "Entrenar en un ambiente motivador y de apoyo",
+        "book": "Reserva tu primera clase",
+        "desc": "Ya sea uno a uno o en un grupo pequeño, cada sesión está estructurada para ayudarte a tomar control de tu cuerpo y construir hábitos duraderos. El objetivo no es solo ejercitarse, sino hacer del movimiento parte de tu estilo de vida.",
+        "list": {
+            "strength": {
+                "title": "Fuerza",
+                "text": "Construimos músculo real. No solo para levantar más, sino para moverte mejor, proteger tus articulaciones y manejar la vida cotidiana con menos esfuerzo."
+            },
+            "mobility": {
+                "title": "Movilidad",
+                "text": "La movilidad significa poder alcanzar, doblar, girar y moverse sin dolor. Entrenamos para un mejor rango de movimiento, movimientos más fluidos y salud articular a largo plazo."
+            },
+            "balance": {
+                "title": "Equilibrio",
+                "text": "El equilibrio te ayuda a mantener el control. Ya sea caminando, levantando o cambiando de dirección, te ayuda a moverte durante tu día con confianza."
+            }
+        }
+    }
+}

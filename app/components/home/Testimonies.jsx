@@ -20,7 +20,7 @@ function Testimonies() {
 
           {/* Decorative Lines */}
           <div className="flex items-center justify-center md:justify-start gap-2 mt-4">
-            <span className="block w-8 h-1 grad rounded"></span>
+            <span className="block w-8 h-1 bg-red-600 rounded"></span>
             <span className="block w-6 h-1 bg-gray-300 rounded"></span>
           </div>
 

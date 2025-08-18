@@ -1,47 +1,36 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
-import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
+import { HiOutlineX } from "react-icons/hi";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import Logo from "./Logo";
 import TopBar from "./TopBar";
-import Image from "next/image";
 import { Menu } from "lucide-react";
-
-const services = [
-  {
-    title: "Youth Soccer Training",
-    image: "/images/asset7.jpg",
-    description:
-      "Our youth soccer training is built to help young players get stronger, faster, and more confident...",
-    href: "/services/youth-soccer-training",
-  },
-  {
-    title: "Soccer Camps & Events",
-    image: "/images/asset1.jpg",
-    description:
-      "We occasionally host soccer camps and special events focused on skill development and team-building...",
-    href: "/services/soccer-camps-events",
-  },
-  {
-    title: "Functional / Group Training",
-    image: "/images/slider/slider5.jpg",
-    description:
-      "Focuses on building strength, stability, and mobility that directly improves the way you move...",
-    href: "/services/functional-training",
-  },
-  {
-    title: "Personal Training",
-    image: "/images/asset5.jpg",
-    description: "Our personal training is focused on you and your goals...",
-    href: "/services/personal-training",
-  },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
+import useMountedTranslation from "@/hook/useMountedTranslation";
 
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false); // For mobile dropdown toggle
+  const { t, mounted } = useMountedTranslation();
+
+  const services = useMemo(
+    () => [
+      {
+        title: t("training.youth"),
+        image: "/images/asset7.jpg",
+        description: t("training.youth_description"),
+        href: "/youth",
+      },
+      {
+        title: t("training.group"),
+        image: "/images/asset5.jpg",
+        description: t("training.group_description"),
+        href: "/group",
+      },
+    ],
+    [t, mounted]
+  );
 
   useEffect(() => {
     function handleResize() {
@@ -55,19 +44,22 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Shop", href: "/merch" },
-    { name: "News & Events", href: "/news" },
-    { name: "Download Our App", href: "/app" },
+    { name: t("nav.home"), href: "/", title: "home" },
+    { name: t("nav.about"), href: "/about", title: "about" },
+    { name: t("nav.service"), href: "/services", title: "service" },
+    { name: t("nav.shop"), href: "/merch", title: "shop" },
+    { name: t("nav.news"), href: "/news", title: "news" },
+    { name: t("nav.app"), href: "/app", title: "app" },
   ];
 
+  const handleBackdrop = useCallback(() => {
+    setSidebarOpen(false);
+  }, []);
   return (
     <>
       <nav className="fixed top-0 w-full bg-black text-white z-50 shadow-md">
         <TopBar />
-        <div className="max-w-[1300px] mx-auto px-6">
+        <div className="w-full mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <div className="flex flex-row gap-5 justify-between w-full lg:justify-start lg:w-fit">
               <button
@@ -86,29 +78,16 @@ export default function Navbar() {
             {/* Desktop Nav on right */}
             <div className="hidden lg:flex items-center space-x-8">
               <Link
-                href="/contact"
-                className="
-    px-5 py-2 
-    border-2 border-white/80 
-    rounded-full 
-    text-white 
-    uppercase 
-    text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg
-    outline-none 
-    focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2
-    hover:opacity-70 hover:scale-105 
-    transition 
-    duration-300 ease-in-out
-    shadow-sm
-  "
+                href="/location"
+                className="px-4 py-1.5 bg-white text-background rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
               >
-                Locations
+                {mounted && t("location")}
               </Link>
               <Link
                 href="/contact"
-                className="px-4 py-1.5 grad rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
+                className="px-4 py-1.5 bg-red-600 rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
               >
-                Contact Us
+                {mounted && t("contact")}
               </Link>
             </div>
           </div>
@@ -117,7 +96,7 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full grad text-white z-60 transform transition-transform duration-500 ease-in-out
+        className={`fixed top-0 left-0 h-full bg-red-600 text-white z-60 transform transition-transform duration-500 ease-in-out
     ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
     w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/3 xl:w-1/4`}
       >
@@ -126,7 +105,7 @@ export default function Navbar() {
           <button
             aria-label="Close menu"
             onClick={() => setSidebarOpen(false)}
-            className="text-white text-3xl focus:outline-none"
+            className="text-white text-3xl focus:outline-none hover:opacity-50 cursor-pointer hover:border hover:border-white rounded-full transition-all duration-200"
           >
             <HiOutlineX />
           </button>
@@ -135,7 +114,7 @@ export default function Navbar() {
         {/* Sidebar Nav Links */}
         <nav className="flex flex-col p-4 space-y-4 font-semibold mt-16">
           {navLinks.map((link) => {
-            if (link.name === "Services") {
+            if (link.title === "service") {
               return (
                 <div key={link.name} className="flex flex-col mb-3">
                   <button
@@ -157,7 +136,7 @@ export default function Navbar() {
                           key={title}
                           href={href}
                           onClick={() => setSidebarOpen(false)}
-                          className="hover:text-gray-300 mb-3 transition text-sm sm:text-base md:text-lg hover:underline"
+                          className="hover:text-gray-300 mb-3 uppercase transition text-sm sm:text-base md:text-lg hover:underline"
                         >
                           {title}
                         </Link>
@@ -172,22 +151,22 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setSidebarOpen(false)}
-                  className="hover:text-gray-300 mb-5 transition text-sm sm:text-base md:text-lg uppercase"
+                  className="hover:text-gray-300 mb-5  transition text-sm sm:text-base md:text-lg uppercase"
                 >
                   {link.name}
                 </Link>
               );
             }
           })}
-          <Link
-            href="/contact"
-            onClick={() => setSidebarOpen(false)}
-            className="px-10 py-1.5 w-max rounded-full uppercase bg-white text-black transition text-sm sm:text-base md:text-lg"
-          >
-            Contact Us
-          </Link>
+          <LanguageSwitcher />
         </nav>
       </div>
+      {sidebarOpen && (
+        <div
+          onClick={handleBackdrop}
+          className="bg-[rgba(0,0,0,0.6)] top-0 left-0 right-0 bottom-0 w-full h-screen fixed z-30"
+        ></div>
+      )}
     </>
   );
 }

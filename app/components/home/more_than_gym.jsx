@@ -1,21 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import {
+  MoreThanGymTextDesc,
+  MoreThanGymTextFooter,
+  MoreThanGymTextTitle,
+} from "../Texts/Text";
 
 function MoreThanGym() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center">
-      <h1 className="text-4xl font-bold text-red-600 uppercase">
-        More than a Gym
-      </h1>
-      <div className="my-4 h-1 w-16 grad"></div>
+      <MoreThanGymTextTitle />
+      <div className="my-4 h-1 w-16 bg-red-600"></div>
       <div className="max-w-6xl px-5">
-        <p className="text-lg text-gray-700 ">
-          Ray Athletics is a performance training center founded by athlete and
-          coach Rediet Berihu. Built from the ground up, it’s focused on
-          functional movement, soccer development, and helping people train with
-          discipline and purpose.
-        </p>
+        <MoreThanGymTextDesc />
       </div>
       <div className="my-8">
         <Image
@@ -27,9 +25,7 @@ function MoreThanGym() {
         />
       </div>
       <div className="max-w-6xl px-5">
-        <p className="text-lg text-gray-700 max-w-5xl">
-          From youth players to adults, this is where real athletes are made.
-        </p>
+        <MoreThanGymTextFooter />
       </div>
     </div>
   );

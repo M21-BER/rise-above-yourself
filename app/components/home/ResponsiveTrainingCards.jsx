@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { HomeGroup, HomeYouth } from "../Texts/Text";
 
 export default function ResponsiveTrainingCards() {
   const [isSmall, setIsSmall] = useState(false);
@@ -44,27 +45,7 @@ export default function ResponsiveTrainingCards() {
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
         <div className="flex-1 flex flex-row justify-between items-start sm:items-center gap-2 w-full">
-          <div className="flex-[8] px-6 sm:px-10">
-            <h3
-              className="font-bold uppercase"
-              style={{
-                fontSize: "clamp(0.75rem, 2vw, 1.125rem)",
-                lineHeight: 1.2,
-              }}
-            >
-              Youth Soccer Training
-            </h3>
-            <p
-              className="text-gray-300"
-              style={{
-                fontSize: "clamp(0.6rem, 1.5vw, 1rem)",
-                marginTop: "0.25rem",
-                lineHeight: 1.3,
-              }}
-            >
-              Gain an advantage by getting faster, stronger, and more agile.
-            </p>
-          </div>
+          <HomeYouth />
           <div className="flex-[2] flex justify-end sm:justify-center">
             <ChevronRight
               className="flex-shrink-0 text-white group-hover:text-gray-200 transition-colors duration-300"
@@ -88,29 +69,7 @@ export default function ResponsiveTrainingCards() {
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
         <div className="flex-1 flex flex-row justify-between items-start sm:items-center gap-2 w-full">
-          <div className="flex-[8] px-6  sm:pl-20">
-            <h3
-              className="font-bold uppercase text-white"
-              style={{
-                fontSize: "clamp(0.75rem, 2vw, 1.125rem)",
-                lineHeight: 1.2,
-              }}
-            >
-              Personal/Group Training
-            </h3>
-            <p
-              className="text-gray-200"
-              style={{
-                fontSize: "clamp(0.6rem, 1.5vw, 1rem)",
-                marginTop: "0.25rem",
-                lineHeight: 1.3,
-              }}
-            >
-              Designed to help you move freely, build lasting strength, and feel
-              at home in your body.
-            </p>
-          </div>
-
+          <HomeGroup />
           <div className="flex-[2] flex justify-end sm:justify-center">
             <ChevronRight
               className="flex-shrink-0 text-white group-hover:text-gray-200 transition-colors duration-300"

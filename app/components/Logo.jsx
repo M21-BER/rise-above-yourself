@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LogoSubTitle, LogoTitle } from "./Texts/Text";
 
 function Logo() {
   return (
@@ -21,29 +22,8 @@ function Logo() {
 
       {/* Text (sm and up) */}
       <div className="hidden sm:flex flex-col justify-center leading-tight pl-1">
-        <h2
-          className="
-            font-allerta_stencil 
-            text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] 
-            tracking-tight
-            leading-tight
-          "
-          style={{ maxHeight: "60%" }}
-        >
-          R.A.Y ATHLETICS
-        </h2>
-        <h4
-          className="
-            italic
-            font-extrabold
-            text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] 
-            text-[#D00A02]
-            leading-snug
-          "
-          style={{ maxHeight: "40%" }}
-        >
-          RISE ABOVE YOURSELF
-        </h4>
+        <LogoTitle />
+        <LogoSubTitle />
       </div>
     </div>
   );

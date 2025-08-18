@@ -1,0 +1,147 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "service": "Services",
+        "shop": "Shop",
+        "news": "News & Events",
+        "app": "Download Our App"
+    },
+    "languages": {
+        "en": "English",
+        "es": "Spanish",
+        "am": "Amharic",
+        "lang": "Language"
+    },
+    "training": {
+        "youth": "Youth Soccer Training",
+        "youth_description": "Gain an advantage by getting faster, stronger, and more agile.",
+        "group": "Personal/Group Training",
+        "group_description": "Designed to help you move freely and build strength."
+    },
+    "location": "Locations",
+    "contact": "Contact Us",
+    "logo_title": "R.A.Y ATHLETICS",
+    "logo_subtitle": "RISE ABOVE YOURSELF",
+    "lang": "Language",
+    "more_than_gym_section": {
+        "more_than_gym_title": "More than a Gym",
+        "more_than_gym_desc": "Ray Athletics is a performance training center founded by athlete and coach Rediet Berihu. Built from the ground up, it’s focused on functional movement, soccer development, and helping people train with discipline and purpose.",
+        "more_than_gym_footer": "From youth players to adults, this is where real athletes are made."
+    },
+    "process_section": {
+        "title": "THE PROCESS",
+        "desc": "Here’s what it looks like day by day."
+    },
+    "mobile": {
+        "title": "Mobile App",
+        "desc": "Take your training, progress, and motivation wherever you go.",
+        "subtitle": "Download R.A.Y Athletics App."
+    },
+    "footer": {
+        "quote": "A professional coach will grow with you.",
+        "address": "Address",
+        "help": "Help",
+        "info": "Looking for info?",
+        "news": "Get latest news",
+        "work": "Work with us",
+        "quick": "Quick Links",
+        "contact": "Contact"
+    },
+    "location_page": {
+        "upcoming": "Upcoming Events",
+        "events": "Events",
+        "desc": "Check out our latest player profiles and events happening near you.",
+        "mon": "Monday",
+        "fri": "Friday"
+    },
+    "contact_page": {
+        "talk": "Let's talk",
+        "name": "Name",
+        "enter_name": "Your full name",
+        "email": "Email",
+        "enter_email": "you@example.com",
+        "message": "Message",
+        "enter_message": "Write your message here...",
+        "send": "Send Message"
+    },
+    "about_page": {
+        "title": "ABOUT R.A.Y ATHLETICS",
+        "desc": "What began with one-on-one soccer sessions in parks and driveways has grown into a full training center built on consistency, purpose, and a deep love for the game.",
+        "list": {
+            "consistency": {
+                "title": "Consistency",
+                "desc": "We show up — not just when it’s exciting, but especially when it’s not."
+            },
+            "effort": {
+                "title": "Effort",
+                "desc": "You don’t have to be the best. You just have to try — fully, and for real."
+            },
+            "respect": {
+                "desc": "We treat people, space, and the work with care. That’s non-negotiable.",
+                "title": "Respect"
+            },
+            "responsibility": {
+                "desc": "You take ownership of your body, your progress, and your energy. Nobody can do that for you.",
+                "title": "Responsibility"
+            },
+            "presence": {
+                "title": "Presence",
+                "desc": "We train hard, but we also enjoy being here. Good people, good energy — that matters too."
+            }
+        },
+        "founded": "Founded by",
+        "founder": "Reddiet Berihun",
+        "par1": "Ray Athletics started with our founder’s passion for soccer. From early on, it was more than just a sport; it was his focus, his discipline, and the way he connected with others. He began training kids in local parks and driveways, doing whatever he could to help them move better and play stronger.",
+        "par2": "Over time, those sessions grew into a full training program. What started with soccer became a space for youth and adults to train with purpose, building strength, consistency, and confidence along the way."
+    },
+    "youth_page": {
+        "title": "Youth Soccer training",
+        "li1": "Improve speed & quickness",
+        "li2": "Build endurance & stamina",
+        "li3": "Enhance ball control & technique",
+        "li4": "Develop tactical awareness",
+        "li5": "Increase strength & power",
+        "li6": "Boost balance & coordination",
+        "book": "Book Your First Class",
+        "desc": "Whether it’s one-on-one or in a small group, every session is structured to help you take ownership of your body and build lasting habits. The goal isn’t just to work out. It’s to make movement part of your lifestyle.",
+        "list": {
+            "technique": {
+                "title": "Technique",
+                "text": "Mastering ball control, passing, dribbling, and shooting helps young players build confidence and play smarter on the field."
+            },
+            "speed": {
+                "title": "Speed",
+                "text": "Speed means moving quickly and efficiently. It helps players reach the ball faster and keep up with the fast pace of the game."
+            },
+            "agility": {
+                "title": "Agility",
+                "text": "Agility is about changing direction quickly and staying balanced, so players can dodge opponents and react to the game with ease."
+            }
+        }
+    },
+    "group_page": {
+        "title": "Group/Personal Fitness Training",
+        "li1": "Build strength & muscle",
+        "li2": "Improve athletic performance",
+        "li3": "Support weight loss goals",
+        "li4": "Boost endurance & energy",
+        "li5": "Train in a supportive, motivating environment",
+        "book": "Book Your First Class",
+        "desc": "Whether it’s one-on-one or in a small group, every session is structured to help you take ownership of your body and build lasting habits. The goal isn’t just to work out. It’s to make movement part of your lifestyle.",
+        "list": {
+            "strength": {
+                "title": "Strength",
+                "text": "We build real muscle. Not just to lift more, but to move better, support your joints, and handle everyday life with less strain."
+            },
+            "mobility": {
+                "title": "Mobility",
+                "text": "Mobility means being able to reach, bend, twist, and move without pain. We train for better range, smoother movement, and long-term joint health."
+            },
+            "balance": {
+                "title": "Balance",
+                "text": "Balance helps you stay in control. Whether you’re walking, lifting, or changing direction, it helps you move through your day with confidence."
+            }
+        }
+    }
+}

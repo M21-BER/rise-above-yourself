@@ -1,15 +1,29 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import { useState, useRef, useEffect, useCallback, useMemo, memo } from "react";
 
-export default function VideoPlayer() {
+function VideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [showControls, setShowControls] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // ✅ track loading state
   const videoRef = useRef(null);
   const timeoutRef = useRef(null);
 
-  const togglePlayPause = () => {
+  // Show controls for 3s
+  const showControlsForAWhile = useCallback(() => {
+    setShowControls(true);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setShowControls(false);
+    }, 3000);
+  }, []);
+
+  // Toggle play/pause
+  const togglePlayPause = useCallback(() => {
     if (!videoRef.current) return;
+
     if (videoRef.current.paused) {
       videoRef.current.play();
       setIsPlaying(true);
@@ -18,87 +32,176 @@ export default function VideoPlayer() {
       setIsPlaying(false);
     }
     showControlsForAWhile();
-  };
+  }, [showControlsForAWhile]);
 
-  // Show controls for 3 seconds on interaction
-  const showControlsForAWhile = () => {
-    setShowControls(true);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setShowControls(false);
-    }, 3000);
-  };
+  // Toggle mute/unmute
+  const toggleMute = useCallback(() => {
+    if (!videoRef.current) return;
 
-  // Show controls on hover or focus
-  const handleMouseMove = () => {
+    videoRef.current.muted = !videoRef.current.muted;
+    setIsMuted(videoRef.current.muted);
     showControlsForAWhile();
-  };
+  }, [showControlsForAWhile]);
 
-  const handleVideoClick = () => {
-    togglePlayPause();
-  };
-
-  // Clean timeout on unmount
+  // Autoplay on mount
   useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true; // force muted autoplay
+      videoRef.current
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch((err) => console.log("Autoplay blocked:", err));
+    }
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
+  // Restart when video ends
+  const handleVideoEnd = useCallback(() => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  }, []);
+
+  // Memoized icons
+  const playIcon = useMemo(
+    () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-8 w-8"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M5 3v18l15-9L5 3z" />
+      </svg>
+    ),
+    []
+  );
+
+  const pauseIcon = useMemo(
+    () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M10 9v6m4-6v6"
+        />
+      </svg>
+    ),
+    []
+  );
+
+  const muteIcon = useMemo(
+    () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 9l6 6m0-6l-6 6"
+        />
+      </svg>
+    ),
+    []
+  );
+
+  const volumeIcon = useMemo(
+    () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M11 5l-6 6h4v6l6-6h-4V5z"
+        />
+      </svg>
+    ),
+    []
+  );
+
   return (
     <div
       className="flex-1 relative max-h-[500px] min-h-[250px] sm:min-h-[300px] lg:min-h-full"
-      onMouseMove={handleMouseMove}
+      onMouseMove={showControlsForAWhile}
       onFocus={showControlsForAWhile}
-      tabIndex={0} // make div focusable for keyboard users
-      style={{ overflow: "hidden" }} // hide overflow if any
+      tabIndex={0}
+      style={{ overflow: "hidden" }}
     >
+      {/* ✅ Placeholder image while video loads */}
+      {isLoading && (
+        <Image
+          src="/images/slider/slider8.jpg"
+          alt="Loading..."
+          fill
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          priority // optional: makes sure it loads ASAP
+        />
+      )}
+
+      {/* Video */}
       <video
         ref={videoRef}
-        className="w-full h-full object-cover"
-        src="/videos/training.mp4" // your video path
+        className="w-full h-full object-cover relative z-10"
+        src="/videos/training.mp4"
         preload="metadata"
-        onClick={handleVideoClick}
+        autoPlay
+        muted
+        playsInline
+        onClick={togglePlayPause}
+        onEnded={handleVideoEnd} // restart when ends
+        onLoadedData={() => setIsLoading(false)} // ✅ hide placeholder once loaded
       />
 
-      {/* Controls: play/pause button centered */}
+      {/* Controls overlay */}
       {showControls && (
-        <button
-          onClick={togglePlayPause}
-          aria-label={isPlaying ? "Pause video" : "Play video"}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[rgba(0,0,0,0.6)] bg-opacity-50 text-white rounded-full p-4 flex items-center justify-center hover:bg-opacity-70 transition"
-          style={{ zIndex: 10 }}
-        >
-          {isPlaying ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <>
+          {/* Play / Pause centered */}
+          <div className="absolute inset-0 flex items-center justify-center z-20">
+            <button
+              onClick={togglePlayPause}
+              aria-label={isPlaying ? "Pause video" : "Play video"}
+              className="bg-[rgba(0,0,0,0.6)] text-white rounded-full p-4 hover:bg-opacity-70 transition"
             >
-              {/* Pause icon */}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 9v6m4-6v6"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              stroke="none"
+              {isPlaying ? pauseIcon : playIcon}
+            </button>
+          </div>
+
+          {/* Mute / Unmute bottom-left */}
+          <div className="absolute bottom-4 left-4 z-20">
+            <button
+              onClick={toggleMute}
+              aria-label={isMuted ? "Unmute video" : "Mute video"}
+              className="bg-[rgba(0,0,0,0.6)] text-white rounded-full p-3 hover:bg-opacity-70 transition"
             >
-              {/* Play icon */}
-              <path d="M5 3v18l15-9L5 3z" />
-            </svg>
-          )}
-        </button>
+              {isMuted ? muteIcon : volumeIcon}
+            </button>
+          </div>
+        </>
       )}
     </div>
   );
 }
+
+export default memo(VideoPlayer);
