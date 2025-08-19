@@ -51,12 +51,15 @@ body {
 }
 
 @layer base {
+  .custom-scroll::-webkit-scrollbar,
   html::-webkit-scrollbar {
     width: 6px;
   }
-
   html::-webkit-scrollbar-track {
     background: var(--secondary);
+  }
+  .custom-scroll::-webkit-scrollbar-track {
+    background: var(--foreground);
   }
 
   html::-webkit-scrollbar-thumb {
@@ -64,6 +67,12 @@ body {
     border: 0.25rem solid transparent;
   }
 
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #da5b56;
+    border: 0.25rem solid transparent;
+  }
+
+  .custom-scroll::-webkit-scrollbar-button,
   html::-webkit-scrollbar-button {
     display: none;
   }

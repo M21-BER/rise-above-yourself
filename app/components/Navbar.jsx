@@ -96,19 +96,13 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-red-600 text-white z-60 transform transition-transform duration-500 ease-in-out
+        className={`fixed overflow-y-auto custom-scroll  top-0 left-0 h-full bg-red-600 text-white z-60 transform transition-transform duration-500 ease-in-out
     ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
     w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/3 xl:w-1/4`}
       >
         {/* Close Button */}
         <div className="p-4 absolute top-0 left-0">
-          <button
-            aria-label="Close menu"
-            onClick={() => setSidebarOpen(false)}
-            className="text-white text-3xl focus:outline-none hover:opacity-50 cursor-pointer hover:border hover:border-white rounded-full transition-all duration-200"
-          >
-            <HiOutlineX />
-          </button>
+          <LanguageSwitcher />
         </div>
 
         {/* Sidebar Nav Links */}
@@ -136,7 +130,7 @@ export default function Navbar() {
                           key={title}
                           href={href}
                           onClick={() => setSidebarOpen(false)}
-                          className="hover:text-gray-300 mb-3 uppercase transition text-sm sm:text-base md:text-lg hover:underline"
+                          className="hover:text-gray-300 mb-3 font-dm_sans uppercase transition text-sm sm:text-base md:text-lg hover:underline"
                         >
                           {title}
                         </Link>
@@ -151,14 +145,36 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setSidebarOpen(false)}
-                  className="hover:text-gray-300 mb-5  transition text-sm sm:text-base md:text-lg uppercase"
+                  className="hover:text-gray-300 mb-5 font-dm_sans transition text-sm sm:text-base md:text-lg uppercase"
                 >
                   {link.name}
                 </Link>
               );
             }
           })}
-          <LanguageSwitcher />
+
+          <Link
+            href="/location"
+            className="lg:hidden hover:text-gray-300 mb-5  transition text-sm sm:text-base md:text-lg uppercase underline"
+          >
+            {mounted && t("location")}
+          </Link>
+          <Link
+            href="/contact"
+            className="lg:hidden hover:text-gray-300 mb-5  transition text-sm sm:text-base md:text-lg uppercase underline"
+          >
+            {mounted && t("contact")}
+          </Link>
+
+          <div className="p-4 absolute top-0 right-0">
+            <button
+              aria-label="Close menu"
+              onClick={() => setSidebarOpen(false)}
+              className="text-white text-3xl focus:outline-none hover:opacity-50 cursor-pointer rounded-full transition-all duration-200"
+            >
+              <HiOutlineX />
+            </button>
+          </div>
         </nav>
       </div>
       {sidebarOpen && (

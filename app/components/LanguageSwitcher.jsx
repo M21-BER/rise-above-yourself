@@ -43,17 +43,17 @@ export default function LocaleSwitcherSelect() {
         <Select.Trigger
           aria-label="Select language"
           className={clsx(
-            "group rounded-sm p-2 flex flex-row gap-3 transition-colors hover:bg-slate-200 hover:text-background",
+            "group rounded-sm flex flex-row gap-3 transition-all hover:opacity-50",
             isPending && "pointer-events-none opacity-60"
           )}
         >
           <Select.Icon>
             {/* Now the icon responds to the parent's hover */}
-            <LanguagesIcon className="h-6 w-6 text-white transition-colors group-hover:text-background" />
+            <LanguagesIcon className="h-6 w-6 text-white" />
           </Select.Icon>
-          <span className="transition-colors group-hover:text-background">
+          {/* <span className="transition-colors group-hover:text-background">
             {languages.find((l) => l.value === selectedLang)?.label}
-          </span>
+          </span> */}
         </Select.Trigger>
 
         <Select.Content
@@ -67,7 +67,7 @@ export default function LocaleSwitcherSelect() {
                 value={item.value}
                 className="flex cursor-default items-center px-3 py-2 text-base text-black data-[highlighted]:bg-slate-100"
               >
-                <Select.ItemText className="flex-1 text-black">
+                <Select.ItemText className="flex-1 font-dm_sans text-black">
                   {item.label}
                 </Select.ItemText>
                 {item.value === selectedLang && (
