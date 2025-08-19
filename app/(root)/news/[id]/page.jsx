@@ -20,7 +20,7 @@ export default async function NewsDetailPage({ params }) {
   if (!newsItem) return notFound();
 
   return (
-    <main className="max-w-6xl mx-auto px-4 md:px-8 text-white py-32">
+    <main className="max-w-6xl mx-auto px-4 md:px-8 text-black py-32">
       <div className="mb-12">
         <img
           src={newsItem.image}
@@ -29,13 +29,13 @@ export default async function NewsDetailPage({ params }) {
         />
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+      <h1 className="text-4xl md:text-5xl font-semibold text-neutral-900 mb-4">
         {newsItem.title}
       </h1>
-      <p className="text-sm text-gray-200 mb-10">{newsItem.date}</p>
+      <p className="text-sm text-neutral-700  mb-10">{newsItem.date}</p>
 
       <section className="prose prose-invert prose-lg max-w-none">
-        <p className="text-base md:text-lg text-gray-300">
+        <p className="text-base md:text-lg text-black">
           R.A.Y. Athletics is proud to announce the opening of its new
           performance gym in Virginia. The space is now officially open and
           welcoming youth and adult athletes for structured, intentional
@@ -49,7 +49,7 @@ export default async function NewsDetailPage({ params }) {
           integration for total-body performance.
         </p>
 
-        <p className="text-base md:text-lg text-gray-300 mt-4">
+        <p className="text-base md:text-lg text-black mt-4">
           With a grand opening celebration coming soon, R.A.Y. Athletics invites
           the community to come experience a space built on consistency,
           accountability, and culture. Whether you're a parent looking for a
@@ -57,43 +57,43 @@ export default async function NewsDetailPage({ params }) {
           looking to recommit to your fitness, this gym was created to meet you
           where you are and help you go further.
         </p>
-        <div className="text-base md:text-lg text-gray-300 mt-4 space-y-2">
+        <div className="text-base md:text-lg text-black mt-4 space-y-2">
           <p>For more information, please contact</p>
 
           <p>
-            <span className="text-white">Call or Text</span>{" "}
+            <span className="text-black">Call or Text</span>{" "}
             <a
               href="tel:+16194047752"
-              className="underline text-red-200 hover:text-red-100"
+              className="underline text-red-500 hover:text-red-800"
             >
               +1 (619) 404-7752
             </a>
           </p>
 
           <p>
-            <span className="text-white">Instagram:</span>{" "}
+            <span className="text-black">Instagram:</span>{" "}
             <a
               href="https://instagram.com/rayathletics__"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-red-200 hover:text-red-100"
+              className="underline text-red-500 hover:text-red-800"
             >
               @rayathletics__
             </a>
           </p>
 
-          <p className="text-white">Location:</p>
-          <p className="text-red-200 hover:text-red-100">
+          <p className="text-black">Location:</p>
+          <p className="text-red-500 hover:text-red-800">
             5649L General Washington Dr.
           </p>
-          <p className="text-red-200 hover:text-red-100">
+          <p className="text-red-500 hover:text-red-800">
             Alexandria, Virginia
           </p>
         </div>
       </section>
 
       {/* YouTube Videos */}
-      <h2 className="text-2xl md:text-3xl font-bold mt-20 mb-6 text-white">
+      <h2 className="text-2xl md:text-3xl font-bold mt-20 mb-6 text-neutral-800">
         Watch the Launch Series 🎥
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -102,7 +102,7 @@ export default async function NewsDetailPage({ params }) {
           href="https://www.youtube.com/watch?v=oLp9z52zTEg"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300 border border-[rgba(255,255,255,0.1)]"
+          className="bg-neutral-900  rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300 border border-[rgba(255,255,255,0.1)]"
         >
           <div className="relative h-48 w-full overflow-hidden">
             <img
@@ -126,7 +126,7 @@ export default async function NewsDetailPage({ params }) {
           href="https://www.youtube.com/watch?v=2VXFf-2zp94"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300 border border-[rgba(255,255,255,0.1)]"
+          className="bg-neutral-900  rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300 border border-[rgba(255,255,255,0.1)]"
         >
           <div className="relative h-48 w-full overflow-hidden">
             <img

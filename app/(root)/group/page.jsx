@@ -23,7 +23,7 @@ export default function Group() {
           {/* bg-gradient-to-r from-red-600 to-red-500 */}
           <a
             href="tel:+16194047752"
-            className="mt-3 w-fit inline-flex items-center gap-2 grad text-white font-semibold rounded-full px-5 py-3 shadow-lg hover:opacity-90 transition"
+            className="mt-3 w-fit inline-flex items-center gap-2 bg-red-600  text-white font-semibold rounded-full px-5 py-3 shadow-lg hover:opacity-90 transition"
           >
             <div className="flex items-center justify-center bg-red-700 rounded-full p-2">
               <Phone className="w-5 h-5" />
@@ -57,7 +57,7 @@ export default function Group() {
           >
             <div className="max-w-4xl mx-auto text-center z-20 relative">
               <GroupDesc />
-              <div className="w-12 sm:w-14 h-1 grad mx-auto mt-3 sm:mt-4"></div>
+              <div className="w-12 sm:w-14 h-1 bg-red-600  mx-auto mt-3 sm:mt-4"></div>
             </div>
           </div>
         </div>

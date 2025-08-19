@@ -12,6 +12,7 @@ const AppShowcase = () => {
   return (
     <section
       ref={ref}
+      id="app"
       className="bg-background flex flex-col md:flex-row w-full h-auto text-white overflow-hidden py-5"
     >
       {/* Image Container */}
@@ -74,7 +75,7 @@ const AppShowcase = () => {
 
       {/* Text Section */}
       <div className="flex-1/2 text-white p-10">
-        <h1 className="text-4xl font-cinzel uppercase md:text-5xl font-extrabold mb-6 w-full md:w-fit tracking-wide border border-white/20 px-4 py-2 text-center rounded-t-lg">
+        <h1 className="text-4xl font-allerta_stencil uppercase md:text-5xl font-medium mb-6 w-full md:w-fit tracking-wide border border-white/20 px-4 py-2 text-center rounded-t-lg">
           {mounted && <span>{t("mobile.title")}</span>}
         </h1>
 
@@ -82,7 +83,7 @@ const AppShowcase = () => {
           {mounted && <span>{t("mobile.desc")}</span>}
         </p>
 
-        <p className="text-2xl font-cinzel text-center uppercase md:text-left font-semibold mb-8">
+        <p className="text-2xl font-jost text-center uppercase md:text-left font-semibold mb-8">
           {mounted && <span>{t("mobile.subtitle")}</span>}
         </p>
 

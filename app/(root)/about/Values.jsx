@@ -84,7 +84,7 @@ export default function RightSemiCircleOutsideIcons() {
                 <div>
                   <h4
                     id={`value-title-${idx}`}
-                    className="font-semibold text-lg font-cinzel  uppercase sm:text-xl text-black"
+                    className="font-normal text-lg font-jost  uppercase sm:text-xl text-black"
                   >
                     {t(`about_page.list.${value.name}.title`)}
                   </h4>

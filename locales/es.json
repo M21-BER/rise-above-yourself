@@ -143,5 +143,13 @@
                 "text": "El equilibrio te ayuda a mantener el control. Ya sea caminando, levantando o cambiando de dirección, te ayuda a moverte durante tu día con confianza."
             }
         }
-    }
+    },
+    "news_page": {
+        "latest_news": "Últimas noticias"
+    },
+    "404_page": {
+        "title": "Página no encontrada | 404",
+        "desc": "No se pudieron encontrar los recursos solicitados"
+    },
+    "loading": "Cargando..."
 }

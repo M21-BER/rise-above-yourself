@@ -143,5 +143,13 @@
                 "text": "Balance helps you stay in control. Whether you’re walking, lifting, or changing direction, it helps you move through your day with confidence."
             }
         }
-    }
+    },
+    "news_page": {
+        "latest_news": "Latest News"
+    },
+    "404_page": {
+        "title": "Page Not Found | 404",
+        "desc": "Could not find the requested resources"
+    },
+    "loading": "Loading..."
 }

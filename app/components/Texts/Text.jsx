@@ -21,7 +21,7 @@ export function LogoSubTitle() {
 
   return (
     <h4
-      className="font-bold text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] text-red-600 leading-snug"
+      className="font-semibold font-jost text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] text-red-600 leading-snug tracking-wide"
       style={{ maxHeight: "40%" }}
     >
       {t("logo_subtitle")}
@@ -36,7 +36,7 @@ export function HomeYouth() {
   return (
     <div className="flex-[8] px-6 sm:px-10">
       <h3
-        className="font-bold uppercase text-white font-cinzel"
+        className="font-medium uppercase text-white font-jost"
         style={{ fontSize: "clamp(0.75rem, 2vw, 1.125rem)", lineHeight: 1.2 }}
       >
         {t("training.youth")}
@@ -62,7 +62,7 @@ export function HomeGroup() {
   return (
     <div className="flex-[8] px-6 sm:pl-20">
       <h3
-        className="font-bold uppercase text-white font-cinzel"
+        className="font-medium uppercase text-white font-jost"
         style={{ fontSize: "clamp(0.75rem, 2vw, 1.125rem)", lineHeight: 1.2 }}
       >
         {t("training.group")}
@@ -86,7 +86,7 @@ export function MoreThanGymTextTitle() {
   if (!mounted) return null;
 
   return (
-    <h1 className="text-4xl font-bold font-cinzel text-red-600 uppercase">
+    <h1 className="text-4xl font-medium font-allerta_stencil text-red-600 uppercase">
       {t("more_than_gym_section.more_than_gym_title")}
     </h1>
   );
@@ -120,7 +120,7 @@ export function ProcessTitle() {
 
   return (
     <h2
-      className="text-white font-cinzel leading-tight font-bold"
+      className="text-white font-allerta_stencil leading-tight font-medium"
       style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)" }}
     >
       {t("process_section.title")}
@@ -181,7 +181,7 @@ export function AboutHeader() {
 
   return (
     <div className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-8 py-6 text-center lg:text-left">
-      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-cinzel  leading-tight">
+      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal font-allerta_stencil  leading-tight">
         {t("about_page.title")}
       </h2>
       <p className="text-white mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-[800px] mx-auto lg:mx-0">
@@ -196,10 +196,10 @@ export function AboutFounder() {
 
   return (
     <>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-cinzel  font-bold text-black mt-3 mb-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-allerta_stencil font-normal capitalize text-black mt-3 mb-2">
         {t("about_page.founded")}
       </h1>
-      <p className="text-black font-dm_sans uppercase text-base sm:text-lg md:text-xl">
+      <p className="text-black font-jost uppercase text-base sm:text-lg md:text-xl">
         {t("about_page.founder")}
       </p>
     </>
@@ -211,10 +211,10 @@ export function AboutParagraph() {
 
   return (
     <>
-      <p className="text-sm sm:text-base md:text-lg font-medium text-black mt-3 mb-4 leading-relaxed">
+      <p className="text-sm sm:text-base md:text-lg font-normal text-black mt-3 mb-4 leading-relaxed">
         {t("about_page.par1")}
       </p>
-      <p className="text-sm sm:text-base md:text-lg font-medium text-black mt-3 mb-4 leading-relaxed">
+      <p className="text-sm sm:text-base md:text-lg font-normal text-black mt-3 mb-4 leading-relaxed">
         {t("about_page.par2")}
       </p>
     </>
@@ -225,7 +225,7 @@ export function YouthTitle() {
   if (!mounted) return null;
 
   return (
-    <h2 className="font-extrabold font-cinzel text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
+    <h2 className="font-normal font-allerta_stencil text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
       {t("youth_page.title")}
     </h2>
   );
@@ -269,7 +269,7 @@ export function YouthBook() {
   if (!mounted) return null;
 
   return (
-    <h3 className="mt-6 font-bold font-cinzel text-black text-base sm:text-lg uppercase">
+    <h3 className="mt-6 font-semibold font-jost text-background text-base sm:text-lg italic">
       {t("youth_page.book")}
     </h3>
   );
@@ -279,7 +279,7 @@ export function YouthDesc() {
   if (!mounted) return null;
 
   return (
-    <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed">
+    <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed">
       {t("youth_page.desc")}
     </p>
   );
@@ -290,8 +290,8 @@ export function GroupTitle() {
   if (!mounted) return null;
 
   return (
-    <h2 className="font-extrabold font-cinzel text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
-      {t("youth_page.title")}
+    <h2 className="font-normal font-allerta_stencil text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
+      {t("group_page.title")}
     </h2>
   );
 }
@@ -304,23 +304,23 @@ export function GroupList() {
     <ul className="mt-4 space-y-2 text-sm sm:text-base text-black/80 list-none">
       <li className="flex items-start gap-3 mb-4">
         <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li1")}
+        {t("group_page.li1")}
       </li>
       <li className="flex items-start gap-3 mb-4">
         <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li2")}
+        {t("group_page.li2")}
       </li>
       <li className="flex items-start gap-3 mb-4">
         <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li3")}
+        {t("group_page.li3")}
       </li>
       <li className="flex items-start gap-3 mb-4">
         <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li4")}
+        {t("group_page.li4")}
       </li>
       <li className="flex items-start gap-3 mb-4">
         <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li5")}
+        {t("group_page.li5")}
       </li>
     </ul>
   );
@@ -331,18 +331,67 @@ export function GroupBook() {
   if (!mounted) return null;
 
   return (
-    <h3 className="mt-6 font-bold font-cinzel text-black text-base sm:text-lg uppercase">
-      {t("youth_page.book")}
+    <h3 className="mt-6 font-semibold font-jost text-background text-base sm:text-lg italic">
+      {t("group_page.book")}
     </h3>
   );
 }
 export function GroupDesc() {
   const { t, mounted } = useMountedTranslation();
+  if (!mounted)
+    return (
+      <>
+        <div className="w-3/4 h-3 bg-gray-300 rounded-md animate-pulse mt-2 mx-auto"></div>
+        <div className="w-3/4 h-3 bg-gray-300 rounded-md animate-pulse mt-2 mx-auto"></div>
+        <div className="w-3/4 h-3 bg-gray-300 rounded-md animate-pulse mt-2 mx-auto"></div>
+      </>
+    );
+
+  return (
+    <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed">
+      {t("group_page.desc")}
+    </p>
+  );
+}
+export function NewsTitle() {
+  const { t, mounted } = useMountedTranslation();
+  if (!mounted)
+    return (
+      <div className="w-48 h-8 bg-gray-300 rounded-md animate-pulse mt-2 mx-auto"></div>
+    );
+
+  return (
+    <h2 className="text-3xl font-normal text-black mb-8 text-center">
+      {t("news_page.latest_news")}
+    </h2>
+  );
+}
+export function NotFoundContent() {
+  const { t, mounted } = useMountedTranslation();
+  if (!mounted)
+    return (
+      <>
+        <div className="w-64 h-10 bg-gray-300 rounded-md animate-pulse mt-6"></div>
+        <div className="w-48 h-6 bg-gray-300 rounded-md animate-pulse mt-2"></div>
+      </>
+    );
+
+  return (
+    <>
+      <h1 className="text-4xl font-allerta_stencil uppercase font-bold text-red-600 mt-6">
+        {t("404_page.title")}
+      </h1>
+      <h2 className="text-lg mt-2">{t("404_page.desc")}</h2>
+    </>
+  );
+}
+export function LoadingText() {
+  const { t, mounted } = useMountedTranslation();
   if (!mounted) return null;
 
   return (
-    <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed">
-      {t("youth_page.desc")}
+    <p className="text-background font-medium text-lg tracking-wide uppercase">
+      {t("loading")}
     </p>
   );
 }

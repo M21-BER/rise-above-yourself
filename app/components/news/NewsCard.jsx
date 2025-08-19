@@ -5,7 +5,7 @@ export default function NewsCard({ news }) {
   return (
     <Link
       href={`/news/${news.id}`}
-      className="group block rounded-2xl overflow-hidden bg-black shadow-lg hover:shadow-2xl transition duration-300 border border-[rgba(255,255,255,0.1)]"
+      className="group block rounded-2xl overflow-hidden bg-neutral-900 shadow-lg hover:shadow-2xl transition duration-300 border border-[rgba(255,255,255,0.1)]"
     >
       {/* Image with overlay and hover zoom */}
       <div className="relative h-56 w-full overflow-hidden">

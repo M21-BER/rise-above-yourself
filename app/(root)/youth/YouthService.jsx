@@ -57,7 +57,7 @@ function YouthService() {
           </div>
 
           <div className="p-4 xs:p-5 sm:p-6 lg:p-8">
-            <h3 className="text-base font-cinzel xs:text-lg sm:text-xl lg:text-2xl font-extrabold uppercase">
+            <h3 className="text-base font-jost xs:text-lg sm:text-xl lg:text-2xl font-medium uppercase">
               {t(`youth_page.list.${service.name}.title`)}
             </h3>
             <p className="mt-2 text-xs xs:text-sm sm:text-base lg:text-lg text-black/80 leading-relaxed">

@@ -106,10 +106,10 @@ function Testimonies() {
           </div>
 
           {/* Decorative Lines */}
-          <div className="flex items-center justify-center md:justify-start gap-2 mt-4">
+          {/* <div className="flex items-center justify-center md:justify-start gap-2 mt-4">
             <span className="block w-8 h-1 bg-red-600 rounded"></span>
             <span className="block w-6 h-1 bg-gray-300 rounded"></span>
-          </div>
+          </div> */}
 
           {/* Author */}
           <cite className="block text-gray-500 text-sm mt-3 not-italic">
@@ -124,7 +124,7 @@ function Testimonies() {
           <button
             key={review.id}
             onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={` w-8 h-1 rounded-full transition-colors ${
               i === index ? "bg-red-600" : "bg-gray-300"
             }`}
           />

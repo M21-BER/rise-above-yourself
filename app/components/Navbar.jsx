@@ -49,7 +49,7 @@ export default function Navbar() {
     { name: t("nav.service"), href: "/services", title: "service" },
     { name: t("nav.shop"), href: "/merch", title: "shop" },
     { name: t("nav.news"), href: "/news", title: "news" },
-    { name: t("nav.app"), href: "/app", title: "app" },
+    { name: t("nav.app"), href: "/#app", title: "app" },
   ];
 
   const handleBackdrop = useCallback(() => {
@@ -106,14 +106,14 @@ export default function Navbar() {
         </div>
 
         {/* Sidebar Nav Links */}
-        <nav className="flex flex-col p-4 space-y-4 font-semibold mt-16">
+        <nav className="flex flex-col p-4 space-y-4  mt-16">
           {navLinks.map((link) => {
             if (link.title === "service") {
               return (
                 <div key={link.name} className="flex flex-col mb-3">
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
-                    className="flex mb-3 items-center justify-between w-full hover:text-gray-300 transition text-sm sm:text-base md:text-lg font-semibold uppercase focus:outline-none"
+                    className="flex mb-3 items-center justify-between w-full hover:opacity-80 transition text-sm sm:text-base md:text-lg  uppercase focus:outline-none"
                     aria-expanded={servicesOpen}
                   >
                     {link.name}
@@ -130,7 +130,7 @@ export default function Navbar() {
                           key={title}
                           href={href}
                           onClick={() => setSidebarOpen(false)}
-                          className="hover:text-gray-300 mb-3 font-dm_sans uppercase transition text-sm sm:text-base md:text-lg hover:underline"
+                          className="hover:opacity-80 mb-3 font-jost uppercase transition text-sm sm:text-base md:text-lg hover:underline"
                         >
                           {title}
                         </Link>
@@ -145,7 +145,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setSidebarOpen(false)}
-                  className="hover:text-gray-300 mb-5 font-dm_sans transition text-sm sm:text-base md:text-lg uppercase"
+                  className="hover:opacity-80 mb-5 font-jost transition text-sm sm:text-base md:text-lg uppercase"
                 >
                   {link.name}
                 </Link>
