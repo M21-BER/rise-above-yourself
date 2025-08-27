@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Providers } from "./providers";
 import localFont from "next/font/local";
-import { Allerta_Stencil, DM_Sans, Cinzel, Jost } from "next/font/google";
+import { Allerta_Stencil, DM_Sans } from "next/font/google";
 const bidsak = localFont({
   src: "./fonts/Bisdak.ttf",
   display: "swap",
@@ -18,16 +18,6 @@ const allerta_Stencil = Allerta_Stencil({
 });
 const dm_sans = DM_Sans({
   variable: "--font-dm_sans",
-  subsets: ["latin"],
-});
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // optional
-  variable: "--font-jost",
-  display: "swap",
-});
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
   subsets: ["latin"],
 });
 
@@ -50,7 +40,7 @@ export default function RootLayout({ children }) {
       </head>
       {/* <body className={`flex  min-h-screen flex-col`}> */}
       <body
-        className={`flex  min-h-screen flex-col ${bidsak.variable} ${jost.variable} ${cinzel.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
+        className={`flex  min-h-screen flex-col ${bidsak.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
       >
         <Providers>
           <Navbar />

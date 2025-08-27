@@ -62,13 +62,18 @@ export default function Navbar() {
         <div className="w-full mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <div className="flex flex-row gap-5 justify-between w-full lg:justify-start lg:w-fit">
-              <button
-                aria-label="Open menu"
-                onClick={() => setSidebarOpen(true)}
-                className="text-white text-3xl focus:outline-none cursor-pointer"
-              >
-                <Menu className="opacity-80" />
-              </button>
+              <div className="flex gap-3 items-center">
+                <button
+                  aria-label="Open menu"
+                  onClick={() => setSidebarOpen(true)}
+                  className="text-white text-3xl focus:outline-none cursor-pointer"
+                >
+                  <Menu className="opacity-80" />
+                </button>
+                <div className="flex lg:hidden items-center">
+                  <LanguageSwitcher />
+                </div>
+              </div>
 
               <Link href="/" className="flex-shrink-0">
                 <Logo />
@@ -77,6 +82,7 @@ export default function Navbar() {
 
             {/* Desktop Nav on right */}
             <div className="hidden lg:flex items-center space-x-8">
+              <LanguageSwitcher />
               <Link
                 href="/location"
                 className="px-4 py-1.5 bg-white text-background rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
@@ -100,12 +106,6 @@ export default function Navbar() {
     ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
     w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/3 xl:w-1/4`}
       >
-        {/* Close Button */}
-        <div className="p-4 absolute top-0 left-0">
-          <LanguageSwitcher />
-        </div>
-
-        {/* Sidebar Nav Links */}
         <nav className="flex flex-col p-4 space-y-4  mt-16">
           {navLinks.map((link) => {
             if (link.title === "service") {
@@ -130,7 +130,7 @@ export default function Navbar() {
                           key={title}
                           href={href}
                           onClick={() => setSidebarOpen(false)}
-                          className="hover:opacity-80 mb-3 font-jost uppercase transition text-sm sm:text-base md:text-lg hover:underline"
+                          className="hover:opacity-80 mb-3 font-dm_sans uppercase transition text-sm sm:text-base md:text-lg hover:underline"
                         >
                           {title}
                         </Link>
@@ -145,7 +145,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setSidebarOpen(false)}
-                  className="hover:opacity-80 mb-5 font-jost transition text-sm sm:text-base md:text-lg uppercase"
+                  className="hover:opacity-80 mb-5 font-dm_sans transition text-sm sm:text-base md:text-lg uppercase"
                 >
                   {link.name}
                 </Link>

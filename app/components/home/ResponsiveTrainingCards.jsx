@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { HomeGroup, HomeYouth } from "../Texts/Text";
+import FadeInOnScroll from "../FadeInOnScroll";
+import FadeInOnLoad from "../FadeInOnLoad";
 
 export default function ResponsiveTrainingCards() {
   const [isSmall, setIsSmall] = useState(false);
@@ -45,7 +47,9 @@ export default function ResponsiveTrainingCards() {
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
         <div className="flex-1 flex flex-row justify-between items-start sm:items-center gap-2 w-full">
-          <HomeYouth />
+          <FadeInOnLoad>
+            <HomeYouth />
+          </FadeInOnLoad>
           <div className="flex-[2] flex justify-end sm:justify-center">
             <ChevronRight
               className="flex-shrink-0 text-white group-hover:text-gray-200 transition-colors duration-300"
@@ -69,7 +73,9 @@ export default function ResponsiveTrainingCards() {
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
         <div className="flex-1 flex flex-row justify-between items-start sm:items-center gap-2 w-full">
-          <HomeGroup />
+          <FadeInOnLoad>
+            <HomeGroup />
+          </FadeInOnLoad>
           <div className="flex-[2] flex justify-end sm:justify-center">
             <ChevronRight
               className="flex-shrink-0 text-white group-hover:text-gray-200 transition-colors duration-300"

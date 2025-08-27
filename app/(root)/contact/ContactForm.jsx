@@ -8,7 +8,7 @@ function ContactForm() {
 
   return (
     <div className="w-full p-8 bg-white rounded-2xl shadow-lg">
-      <h2 className="text-3xl  font-cinzel font-extrabold text-background mb-8 text-center">
+      <h2 className="text-3xl  font-dm_sans font-extrabold text-background mb-8 text-center">
         {t("contact_page.talk")}
       </h2>
 

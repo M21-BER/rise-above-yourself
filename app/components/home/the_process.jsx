@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { ProcessDesc, ProcessTitle } from "../Texts/Text";
+import SlideInFromTop from "../SlideInOnScroll";
+import FadeInOnScroll from "../FadeInOnScroll";
 
 export default function TheProcess() {
   return (
@@ -13,8 +15,12 @@ export default function TheProcess() {
 
       <div className="bg-red-600 [clip-path:polygon(0_0,100%_0,100%_100%,0_100%)] sm:[clip-path:polygon(0_0,100%_0,93%_100%,0_100%)]  w-[100%] sm:w-[45%] xl:w-[35%]">
         <div className="relative px-10 py-5">
-          <ProcessTitle />
-          <ProcessDesc />
+          <FadeInOnScroll>
+            <ProcessTitle />
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <ProcessDesc />
+          </FadeInOnScroll>
         </div>
       </div>
     </div>

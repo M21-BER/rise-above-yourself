@@ -6,16 +6,22 @@ import {
   MoreThanGymTextFooter,
   MoreThanGymTextTitle,
 } from "../Texts/Text";
+import SlideInOnScroll from "../SlideInOnScroll";
+import FadeInOnScroll from "../FadeInOnScroll";
 
 function MoreThanGym() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center">
-      <MoreThanGymTextTitle />
+    <div className="flex flex-col items-center justify-center min-h-screen relative bg-white text-center">
+      <SlideInOnScroll>
+        <MoreThanGymTextTitle />
+      </SlideInOnScroll>
       <div className="my-4 h-1 w-16 bg-red-600"></div>
       <div className="max-w-6xl px-5">
-        <MoreThanGymTextDesc />
+        <FadeInOnScroll>
+          <MoreThanGymTextDesc />
+        </FadeInOnScroll>
       </div>
-      <div className="my-8">
+      <div className="mt-8 mb-0">
         <Image
           src="/images/circle-logo-black.PNG" // Replace with actual logo path
           alt="Ray Athletics Logo"
@@ -24,8 +30,10 @@ function MoreThanGym() {
           className="opacity-50"
         />
       </div>
-      <div className="max-w-6xl px-5">
-        <MoreThanGymTextFooter />
+      <div className="max-w-6xl absolute bottom-8 px-5">
+        <FadeInOnScroll>
+          <MoreThanGymTextFooter />
+        </FadeInOnScroll>
       </div>
     </div>
   );

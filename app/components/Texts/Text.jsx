@@ -7,7 +7,7 @@ export function LogoTitle() {
 
   return (
     <h2
-      className="font-allerta_stencil text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] tracking-tight leading-tight"
+      className="font-dm_sans text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] tracking-tight leading-tight"
       style={{ maxHeight: "60%" }}
     >
       {t("logo_title")}
@@ -21,7 +21,7 @@ export function LogoSubTitle() {
 
   return (
     <h4
-      className="font-semibold font-jost text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] text-red-600 leading-snug tracking-wide"
+      className="font-semibold font-dm_sans text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] text-red-600 leading-snug tracking-wide"
       style={{ maxHeight: "40%" }}
     >
       {t("logo_subtitle")}
@@ -36,7 +36,7 @@ export function HomeYouth() {
   return (
     <div className="flex-[8] px-6 sm:px-10">
       <h3
-        className="font-medium uppercase text-white font-jost"
+        className="font-medium uppercase text-white font-dm_sans"
         style={{ fontSize: "clamp(0.75rem, 2vw, 1.125rem)", lineHeight: 1.2 }}
       >
         {t("training.youth")}
@@ -62,7 +62,7 @@ export function HomeGroup() {
   return (
     <div className="flex-[8] px-6 sm:pl-20">
       <h3
-        className="font-medium uppercase text-white font-jost"
+        className="font-medium uppercase text-white font-dm_sans"
         style={{ fontSize: "clamp(0.75rem, 2vw, 1.125rem)", lineHeight: 1.2 }}
       >
         {t("training.group")}
@@ -86,7 +86,7 @@ export function MoreThanGymTextTitle() {
   if (!mounted) return null;
 
   return (
-    <h1 className="text-4xl font-medium font-allerta_stencil text-red-600 uppercase">
+    <h1 className="text-4xl font-medium font-dm_sans text-red-600 uppercase">
       {t("more_than_gym_section.more_than_gym_title")}
     </h1>
   );
@@ -120,8 +120,8 @@ export function ProcessTitle() {
 
   return (
     <h2
-      className="text-white font-allerta_stencil leading-tight font-medium"
-      style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)" }}
+      className="text-white font-dm_sans leading-tight font-medium"
+      style={{ fontSize: "clamp(1.1rem, 3vw, 2rem)" }}
     >
       {t("process_section.title")}
     </h2>
@@ -147,7 +147,7 @@ export function LocationHeader() {
 
   return (
     <div className="lg:w-1/2 flex flex-col justify-center max-w-xl">
-      <h2 className="text-2xl font-cinzel uppercase text-background sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-4">
+      <h2 className="text-2xl font-dm_sans uppercase text-background sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-4">
         {t("location_page.upcoming")}
       </h2>
       <p className="text-gray-600 mb-6 text-sm sm:text-base lg:text-lg 2xl:text-xl">
@@ -181,7 +181,7 @@ export function AboutHeader() {
 
   return (
     <div className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-8 py-6 text-center lg:text-left">
-      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal font-allerta_stencil  leading-tight">
+      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal font-dm_sans  leading-tight">
         {t("about_page.title")}
       </h2>
       <p className="text-white mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-[800px] mx-auto lg:mx-0">
@@ -196,10 +196,10 @@ export function AboutFounder() {
 
   return (
     <>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-allerta_stencil font-normal capitalize text-black mt-3 mb-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-dm_sans font-normal capitalize text-black mt-3 mb-2">
         {t("about_page.founded")}
       </h1>
-      <p className="text-black font-jost uppercase text-base sm:text-lg md:text-xl">
+      <p className="text-black font-dm_sans uppercase text-base sm:text-lg md:text-xl">
         {t("about_page.founder")}
       </p>
     </>
@@ -225,7 +225,7 @@ export function YouthTitle() {
   if (!mounted) return null;
 
   return (
-    <h2 className="font-normal font-allerta_stencil text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
+    <h2 className="font-normal font-dm_sans text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
       {t("youth_page.title")}
     </h2>
   );
@@ -269,7 +269,7 @@ export function YouthBook() {
   if (!mounted) return null;
 
   return (
-    <h3 className="mt-6 font-semibold font-jost text-background text-base sm:text-lg italic">
+    <h3 className="mt-6 font-semibold font-dm_sans text-background text-base sm:text-lg italic">
       {t("youth_page.book")}
     </h3>
   );
@@ -290,7 +290,7 @@ export function GroupTitle() {
   if (!mounted) return null;
 
   return (
-    <h2 className="font-normal font-allerta_stencil text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
+    <h2 className="font-normal font-dm_sans text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
       {t("group_page.title")}
     </h2>
   );
@@ -331,7 +331,7 @@ export function GroupBook() {
   if (!mounted) return null;
 
   return (
-    <h3 className="mt-6 font-semibold font-jost text-background text-base sm:text-lg italic">
+    <h3 className="mt-6 font-semibold font-dm_sans text-background text-base sm:text-lg italic">
       {t("group_page.book")}
     </h3>
   );
@@ -378,7 +378,7 @@ export function NotFoundContent() {
 
   return (
     <>
-      <h1 className="text-4xl font-allerta_stencil uppercase font-bold text-red-600 mt-6">
+      <h1 className="text-4xl font-dm_sans uppercase font-bold text-red-600 mt-6">
         {t("404_page.title")}
       </h1>
       <h2 className="text-lg mt-2">{t("404_page.desc")}</h2>

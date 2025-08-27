@@ -17,7 +17,7 @@ export default function About() {
         {/* Image */}
         <div className="flex-1 relative w-full min-h-[200px] sm:min-h-[300px] md:min-h-[400px] lg:h-full overflow-hidden">
           <Image
-            src="/images/asset7.jpg"
+            src="/images/slider/slider16.jpg"
             alt="RAY Athletics Logo"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -39,7 +39,7 @@ export default function About() {
         {/* Full-Width Image */}
         <div className="relative w-full min-h-[250px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-screen">
           <Image
-            src="/images/asset3.jpg"
+            src="/images/asset7.jpg"
             alt="Youth soccer training session on green field with players and coach"
             fill
             sizes="100vw"
