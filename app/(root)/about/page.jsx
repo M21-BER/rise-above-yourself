@@ -9,7 +9,7 @@ import {
 
 export default function About() {
   return (
-    <section className="bg-white pt-24">
+    <section className="bg-white pt-16">
       {/* Hero Section */}
       <div className="flex flex-col lg:flex-row h-auto lg:h-[60vh] bg-background w-full overflow-hidden">
         {/* Text Content */}

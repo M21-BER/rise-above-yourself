@@ -8,14 +8,17 @@ import {
   YouthTitle,
 } from "@/app/components/Texts/Text";
 import YouthService from "./YouthService";
+import FadeInOnScroll from "@/app/components/FadeInOnScroll";
 
 export default function YouthSoccerTraining() {
   return (
     <section className="w-full pt-14 sm:pt-20 bg-white">
-      <div className="flex flex-col lg:flex-row items-stretch w-full">
+      <div className="flex flex-col h-screen lg:flex-row items-stretch w-full">
         {/* Left Text Section */}
         <div className="flex-1 flex flex-col justify-center p-6 sm:p-8 lg:p-12">
-          <YouthTitle />
+          <FadeInOnScroll>
+            <YouthTitle />
+          </FadeInOnScroll>
 
           <YouthList />
 

@@ -8,6 +8,7 @@ import {
   GroupTitle,
 } from "@/app/components/Texts/Text";
 import GroupService from "./GroupService";
+import FadeInOnScroll from "@/app/components/FadeInOnScroll";
 
 export default function Group() {
   return (
@@ -15,8 +16,9 @@ export default function Group() {
       <div className="flex flex-col lg:flex-row items-stretch w-full">
         {/* Left Text Section */}
         <div className="flex-1 flex flex-col justify-center p-6 sm:p-8 lg:p-12">
-          <GroupTitle />
-
+          <FadeInOnScroll>
+            <GroupTitle />
+          </FadeInOnScroll>
           <GroupList />
 
           <GroupBook />

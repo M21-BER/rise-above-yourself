@@ -64,7 +64,7 @@ export default function ResponsiveTrainingCards() {
         href="group"
         className="flex flex-1  items-center gap-3 cursor-pointer group
                    transition-transform duration-300
-                   grad px-3 py-6 sm:py-2"
+                   bg-red-600 px-3 py-6 sm:py-2"
         style={{
           clipPath: rightClipPath,
           transformOrigin: !isSmall ? "right center" : "center",

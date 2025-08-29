@@ -3,7 +3,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Providers } from "./providers";
 import localFont from "next/font/local";
-import { Allerta_Stencil, DM_Sans } from "next/font/google";
+import { Allerta_Stencil, DM_Sans, Anton, Noto_Sans } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 const bidsak = localFont({
   src: "./fonts/Bisdak.ttf",
   display: "swap",
@@ -19,6 +21,16 @@ const allerta_Stencil = Allerta_Stencil({
 const dm_sans = DM_Sans({
   variable: "--font-dm_sans",
   subsets: ["latin"],
+});
+const anton = Anton({
+  weight: "400", // Required, since Anton only has this weight
+  subsets: ["latin"],
+  variable: "--font-anton",
+});
+const notoSans = Noto_Sans({
+  weight: ["400", "700"], // required, otherwise hydration mismatch
+  subsets: ["latin"],
+  variable: "--font-noto-sans",
 });
 
 export const metadata = {
@@ -40,13 +52,27 @@ export default function RootLayout({ children }) {
       </head>
       {/* <body className={`flex  min-h-screen flex-col`}> */}
       <body
-        className={`flex  min-h-screen flex-col ${bidsak.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
+        className={`flex  min-h-screen flex-col ${bidsak.variable} ${notoSans.variable} ${anton.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
       >
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
         </Providers>
+        <Link href="/location">
+          <div className="fixed bottom-0 w-full bg-red-600 py-4 px-5 flex items-center justify-center gap-3 shadow-lg z-50 hover:bg-red-700 transition">
+            <p className="text-white font-anton text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center">
+              Try Us For Free
+            </p>
+            <Image
+              src="/right-chevron.png"
+              alt="arrow icon"
+              width={24}
+              height={24}
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10"
+            />
+          </div>
+        </Link>
       </body>
     </html>
   );

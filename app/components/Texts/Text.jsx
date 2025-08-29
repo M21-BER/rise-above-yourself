@@ -1,6 +1,8 @@
 "use client";
 
 import useMountedTranslation from "@/hook/useMountedTranslation";
+import Image from "next/image";
+import FadeInOnScroll from "../FadeInOnScroll";
 export function LogoTitle() {
   const { t, mounted } = useMountedTranslation();
   if (!mounted) return null;
@@ -10,7 +12,7 @@ export function LogoTitle() {
       className="font-dm_sans text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] tracking-tight leading-tight"
       style={{ maxHeight: "60%" }}
     >
-      {t("logo_title")}
+      R.A.Y ATHLETICS
     </h2>
   );
 }
@@ -36,7 +38,7 @@ export function HomeYouth() {
   return (
     <div className="flex-[8] px-6 sm:px-10">
       <h3
-        className="font-medium uppercase text-white font-dm_sans"
+        className="uppercase text-white font-normal font-anton tracking-wide"
         style={{ fontSize: "clamp(0.75rem, 2vw, 1.125rem)", lineHeight: 1.2 }}
       >
         {t("training.youth")}
@@ -62,7 +64,7 @@ export function HomeGroup() {
   return (
     <div className="flex-[8] px-6 sm:pl-20">
       <h3
-        className="font-medium uppercase text-white font-dm_sans"
+        className="font-normal font-anton tracking-wide uppercase text-white "
         style={{ fontSize: "clamp(0.75rem, 2vw, 1.125rem)", lineHeight: 1.2 }}
       >
         {t("training.group")}
@@ -86,7 +88,7 @@ export function MoreThanGymTextTitle() {
   if (!mounted) return null;
 
   return (
-    <h1 className="text-4xl font-medium font-dm_sans text-red-600 uppercase">
+    <h1 className="text-4xl font-normal font-anton tracking-wide text-red-600 uppercase">
       {t("more_than_gym_section.more_than_gym_title")}
     </h1>
   );
@@ -120,8 +122,8 @@ export function ProcessTitle() {
 
   return (
     <h2
-      className="text-white font-dm_sans leading-tight font-medium"
-      style={{ fontSize: "clamp(1.1rem, 3vw, 2rem)" }}
+      className="text-white font-anton  leading-tight font-normal tracking-wide"
+      style={{ fontSize: "clamp(1.3rem, 4vw, 3rem)" }}
     >
       {t("process_section.title")}
     </h2>
@@ -181,7 +183,7 @@ export function AboutHeader() {
 
   return (
     <div className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-8 py-6 text-center lg:text-left">
-      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal font-dm_sans  leading-tight">
+      <h2 className="text-white font-normal font-anton tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl   leading-tight">
         {t("about_page.title")}
       </h2>
       <p className="text-white mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-[800px] mx-auto lg:mx-0">
@@ -196,10 +198,10 @@ export function AboutFounder() {
 
   return (
     <>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-dm_sans font-normal capitalize text-black mt-3 mb-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal font-anton tracking-wide  capitalize text-black mt-3 mb-2">
         {t("about_page.founded")}
       </h1>
-      <p className="text-black font-dm_sans uppercase text-base sm:text-lg md:text-xl">
+      <p className="text-black  uppercase text-base sm:text-lg md:text-xl">
         {t("about_page.founder")}
       </p>
     </>
@@ -225,7 +227,7 @@ export function YouthTitle() {
   if (!mounted) return null;
 
   return (
-    <h2 className="font-normal font-dm_sans text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
+    <h2 className="font-normal font-anton tracking-wide text-neutral-950 text-xl sm:text-2xl lg:text-3xl  uppercase">
       {t("youth_page.title")}
     </h2>
   );
@@ -234,32 +236,33 @@ export function YouthList() {
   const { t, mounted } = useMountedTranslation();
   if (!mounted) return null;
 
+  const items = [
+    t("youth_page.li1"),
+    t("youth_page.li2"),
+    t("youth_page.li3"),
+    t("youth_page.li4"),
+    t("youth_page.li5"),
+    t("youth_page.li6"),
+  ];
+
   return (
-    <ul className="mt-4 space-y-2 text-sm sm:text-base text-black/80 list-none">
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li1")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li2")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li3")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li4")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li5")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("youth_page.li6")}
-      </li>
+    <ul className="mt-4 space-y-2 list-none text-black/80">
+      {items.map((text, idx) => (
+        <FadeInOnScroll key={idx}>
+          <li className="flex items-start gap-3 mb-4 sm:gap-4 lg:gap-5">
+            <Image
+              src="/right.png"
+              alt="bullet icon"
+              width={20} // default for mobile
+              height={20}
+              className="flex-shrink-0 mt-1 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+            />
+            <span className="mt-0.5 text-sm sm:text-base lg:text-lg">
+              {text}
+            </span>
+          </li>
+        </FadeInOnScroll>
+      ))}
     </ul>
   );
 }
@@ -279,9 +282,11 @@ export function YouthDesc() {
   if (!mounted) return null;
 
   return (
-    <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed">
-      {t("youth_page.desc")}
-    </p>
+    <FadeInOnScroll>
+      <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed">
+        {t("youth_page.desc")}
+      </p>
+    </FadeInOnScroll>
   );
 }
 
@@ -290,7 +295,7 @@ export function GroupTitle() {
   if (!mounted) return null;
 
   return (
-    <h2 className="font-normal font-dm_sans text-black text-lg sm:text-xl lg:text-2xl tracking-tight uppercase">
+    <h2 className="font-normal font-anton tracking-wide text-neutral-950 text-xl sm:text-2xl lg:text-3xl  uppercase">
       {t("group_page.title")}
     </h2>
   );
@@ -300,28 +305,32 @@ export function GroupList() {
   const { t, mounted } = useMountedTranslation();
   if (!mounted) return null;
 
+  const items = [
+    t("group_page.li1"),
+    t("group_page.li2"),
+    t("group_page.li3"),
+    t("group_page.li4"),
+    t("group_page.li5"),
+  ];
+
   return (
-    <ul className="mt-4 space-y-2 text-sm sm:text-base text-black/80 list-none">
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("group_page.li1")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("group_page.li2")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("group_page.li3")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("group_page.li4")}
-      </li>
-      <li className="flex items-start gap-3 mb-4">
-        <span className="w-3 h-3 mt-1 bg-red-600 rounded-full flex-shrink-0"></span>
-        {t("group_page.li5")}
-      </li>
+    <ul className="mt-4 space-y-2 list-none text-black/80">
+      {items.map((text, idx) => (
+        <FadeInOnScroll key={idx}>
+          <li className="flex items-start gap-3 mb-4 sm:gap-4 lg:gap-5">
+            <Image
+              src="/right.png"
+              alt="bullet icon"
+              width={20} // default for mobile
+              height={20}
+              className="flex-shrink-0 mt-1 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+            />
+            <span className="mt-0.5 text-sm sm:text-base lg:text-lg">
+              {text}
+            </span>
+          </li>
+        </FadeInOnScroll>
+      ))}
     </ul>
   );
 }
@@ -348,9 +357,11 @@ export function GroupDesc() {
     );
 
   return (
-    <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed">
-      {t("group_page.desc")}
-    </p>
+    <FadeInOnScroll>
+      <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed">
+        {t("group_page.desc")}
+      </p>
+    </FadeInOnScroll>
   );
 }
 export function NewsTitle() {

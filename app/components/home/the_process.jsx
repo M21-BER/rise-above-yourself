@@ -18,9 +18,9 @@ export default function TheProcess() {
           <FadeInOnScroll>
             <ProcessTitle />
           </FadeInOnScroll>
-          <FadeInOnScroll>
+          {/* <FadeInOnScroll>
             <ProcessDesc />
-          </FadeInOnScroll>
+          </FadeInOnScroll> */}
         </div>
       </div>
     </div>

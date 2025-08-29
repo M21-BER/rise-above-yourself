@@ -85,13 +85,13 @@ export default function Navbar() {
               <LanguageSwitcher />
               <Link
                 href="/location"
-                className="px-4 py-1.5 bg-white text-background rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
+                className="px-4 py-1.5 font-noto_Sans font-normal  text-white  border-2 border-white uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
               >
                 {mounted && t("location")}
               </Link>
               <Link
                 href="/contact"
-                className="px-4 py-1.5 bg-red-600 rounded-full uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
+                className="px-4 py-1.5 bg-red-600 font-noto_Sans font-normal  uppercase hover:opacity-50 transition text-xs sm:text-sm md:text-base lg:text-base 2xl:text-lg"
               >
                 {mounted && t("contact")}
               </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
                 <div key={link.name} className="flex flex-col mb-3">
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
-                    className="flex mb-3 items-center justify-between w-full hover:opacity-80 transition text-sm sm:text-base md:text-lg  uppercase focus:outline-none"
+                    className="flex mb-3 font-noto_Sans font-normal items-center justify-between w-full hover:opacity-80 transition text-sm sm:text-base md:text-lg  uppercase focus:outline-none"
                     aria-expanded={servicesOpen}
                   >
                     {link.name}
@@ -130,7 +130,7 @@ export default function Navbar() {
                           key={title}
                           href={href}
                           onClick={() => setSidebarOpen(false)}
-                          className="hover:opacity-80 mb-3 font-dm_sans uppercase transition text-sm sm:text-base md:text-lg hover:underline"
+                          className="hover:opacity-80 font-noto_Sans font-normal mb-3  uppercase transition text-sm sm:text-base md:text-lg hover:underline"
                         >
                           {title}
                         </Link>
@@ -145,7 +145,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setSidebarOpen(false)}
-                  className="hover:opacity-80 mb-5 font-dm_sans transition text-sm sm:text-base md:text-lg uppercase"
+                  className="hover:opacity-80 mb-5 font-noto_Sans font-normal transition text-sm sm:text-base md:text-lg uppercase"
                 >
                   {link.name}
                 </Link>

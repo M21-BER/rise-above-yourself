@@ -78,7 +78,7 @@ const AppShowcase = () => {
       {/* Text Section */}
       <div className="flex-1/2 text-white p-10">
         <SlideInFromTop>
-          <h1 className="text-4xl font-dm_sans uppercase md:text-5xl font-medium mb-6 w-full md:w-fit tracking-wide border border-white/20 px-4 py-2 text-center rounded-t-lg">
+          <h1 className="text-4xl font-normal font-anton tracking-wide uppercase md:text-5xl  mb-6 w-full md:w-fit  border border-white/20 px-4 py-2 text-center rounded-t-lg">
             {mounted && <span>{t("mobile.title")}</span>}
           </h1>
         </SlideInFromTop>

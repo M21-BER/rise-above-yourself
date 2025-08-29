@@ -143,7 +143,7 @@ function VideoPlayer() {
 
   return (
     <div
-      className="flex-1 relative max-h-[500px] min-h-[250px] sm:min-h-[300px] lg:min-h-full"
+      className="flex-1 relative h-full min-h-[250px] sm:min-h-[300px] lg:min-h-full"
       onMouseMove={showControlsForAWhile}
       onFocus={showControlsForAWhile}
       tabIndex={0}

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import useMountedTranslation from "@/hook/useMountedTranslation";
 import React, { useMemo } from "react";
+import SlideInFromTop from "@/app/components/SlideInOnScroll";
 
 function GroupService() {
   const { t, mounted } = useMountedTranslation();
@@ -35,36 +36,37 @@ function GroupService() {
                                    gap-5 xs:gap-6 sm:gap-8 lg:gap-10 xl:gap-12"
     >
       {services.map((service, idx) => (
-        <article
-          key={idx}
-          className="bg-white border border-[rgba(0,0,0,0.1)] text-black rounded-md overflow-hidden shadow-xl
+        <SlideInFromTop key={idx}>
+          <article
+            className="bg-white border border-[rgba(0,0,0,0.1)] text-black rounded-md overflow-hidden shadow-xl
                                     transform hover:-translate-y-1 transition-transform duration-300"
-        >
-          {/* Responsive image height */}
-          <div
-            className="relative w-full h-40 xs:h-44 sm:h-56 md:h-64 lg:h-72 xl:h-80"
-            style={{
-              clipPath: "polygon(0 0, 100% 0, 100% 69%, 0% 100%)",
-            }}
           >
-            <Image
-              src={service.img}
-              alt={service.title}
-              fill
-              className="object-cover"
-              priority={idx === 1}
-            />
-          </div>
+            {/* Responsive image height */}
+            <div
+              className="relative w-full h-40 xs:h-44 sm:h-56 md:h-64 lg:h-72 xl:h-80"
+              style={{
+                clipPath: "polygon(0 0, 100% 0, 100% 69%, 0% 100%)",
+              }}
+            >
+              <Image
+                src={service.img}
+                alt={service.title}
+                fill
+                className="object-cover"
+                priority={idx === 1}
+              />
+            </div>
 
-          <div className="p-4 xs:p-5 sm:p-6 lg:p-8">
-            <h3 className="text-base font-dm_sans xs:text-lg sm:text-xl lg:text-2xl font-medium uppercase">
-              {t(`group_page.list.${service.name}.title`)}
-            </h3>
-            <p className="mt-2 text-xs xs:text-sm sm:text-base lg:text-lg text-black/80 leading-relaxed">
-              {t(`group_page.list.${service.name}.text`)}
-            </p>
-          </div>
-        </article>
+            <div className="p-4 xs:p-5 sm:p-6 lg:p-8">
+              <h3 className="text-base font-dm_sans xs:text-lg sm:text-xl lg:text-2xl font-medium uppercase">
+                {t(`group_page.list.${service.name}.title`)}
+              </h3>
+              <p className="mt-2 text-xs xs:text-sm sm:text-base lg:text-lg text-black/80 leading-relaxed">
+                {t(`group_page.list.${service.name}.text`)}
+              </p>
+            </div>
+          </article>
+        </SlideInFromTop>
       ))}
     </div>
   );

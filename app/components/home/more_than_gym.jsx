@@ -11,7 +11,7 @@ import FadeInOnScroll from "../FadeInOnScroll";
 
 function MoreThanGym() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative bg-white text-center">
+    <div className="flex flex-col items-center justify-center  relative bg-white text-center py-10">
       <SlideInOnScroll>
         <MoreThanGymTextTitle />
       </SlideInOnScroll>
@@ -21,7 +21,7 @@ function MoreThanGym() {
           <MoreThanGymTextDesc />
         </FadeInOnScroll>
       </div>
-      <div className="mt-8 mb-0">
+      <div className="mt-8 my-10">
         <Image
           src="/images/circle-logo-black.PNG" // Replace with actual logo path
           alt="Ray Athletics Logo"
@@ -30,7 +30,7 @@ function MoreThanGym() {
           className="opacity-50"
         />
       </div>
-      <div className="max-w-6xl absolute bottom-8 px-5">
+      <div className="max-w-6xl  px-5">
         <FadeInOnScroll>
           <MoreThanGymTextFooter />
         </FadeInOnScroll>
