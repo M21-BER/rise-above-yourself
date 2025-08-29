@@ -166,7 +166,7 @@ export default function Footer() {
 
         {/* Bottom Text */}
 
-        <div className="border-t border-gray-300 pt-4 text-center text-gray-500 text-xs">
+        <div className="border-t border-gray-300 pt-4 text-center text-gray-500 text-xs pb-10">
           <p>&copy; {year ?? ""} Rise Above Yourself. All rights reserved.</p>
         </div>
       </div>
