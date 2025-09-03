@@ -4,6 +4,7 @@ import MoreThanGym from "../components/home/more_than_gym";
 import TheProcess from "../components/home/the_process";
 import Testimonies from "../components/home/Testimonies";
 import ResponsiveTrainingCards from "../components/home/ResponsiveTrainingCards";
+import PromoSlider from "../components/home/PromoSlider";
 
 export default function HeroSection() {
   return (
@@ -13,6 +14,7 @@ export default function HeroSection() {
       <MoreThanGym />
       <TheProcess />
       <Testimonies />
+      <PromoSlider />
       <AppShowcase />
     </>
   );

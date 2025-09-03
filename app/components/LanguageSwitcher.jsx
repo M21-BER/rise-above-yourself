@@ -51,9 +51,9 @@ export default function LocaleSwitcherSelect() {
             {/* Now the icon responds to the parent's hover */}
             <LanguagesIcon className="h-6 w-6 text-white" />
           </Select.Icon>
-          {/* <span className="transition-colors group-hover:text-background">
-            {languages.find((l) => l.value === selectedLang)?.label}
-          </span> */}
+          <span className="transition-colors group-hover:text-background uppercase">
+            {languages.find((l) => l.value === selectedLang)?.value}
+          </span>
         </Select.Trigger>
 
         <Select.Content

@@ -39,7 +39,7 @@ export default function About() {
         {/* Full-Width Image */}
         <div className="relative w-full min-h-[250px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-screen">
           <Image
-            src="/images/asset7.jpg"
+            src="/images/slider/slider2.jpg"
             alt="Youth soccer training session on green field with players and coach"
             fill
             sizes="100vw"

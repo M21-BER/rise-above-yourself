@@ -164,7 +164,7 @@ function VideoPlayer() {
       <video
         ref={videoRef}
         className="w-full h-full object-cover relative z-10"
-        src="/videos/training.mp4"
+        src="https://media.kidusmarkos.com/vid/training.mp4"
         preload="metadata"
         autoPlay
         muted

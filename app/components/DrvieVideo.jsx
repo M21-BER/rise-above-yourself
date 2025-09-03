@@ -15,7 +15,7 @@ export default function RemoteVideo() {
       )}
 
       <video
-        src="https://media.kidusmarkos.com/vid/sample.mp4"
+        src="https://media.kidusmarkos.com/vid/sample-about.mp4"
         autoPlay
         muted
         loop

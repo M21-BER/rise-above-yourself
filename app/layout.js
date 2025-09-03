@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
       <body
         className={`flex  min-h-screen flex-col ${bidsak.variable} ${notoSans.variable} ${anton.variable} ${allerta_Stencil.variable} ${dm_sans.variable} antialiased`}
       >
-        {/* <Providers>
+        <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
@@ -72,9 +72,9 @@ export default function RootLayout({ children }) {
               className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10"
             />
           </div>
-        </Link> */}
+        </Link>
 
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+        {/* <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-yellow-600 mb-4 animate-pulse">
               🚧 Under Construction 🚧
@@ -82,13 +82,9 @@ export default function RootLayout({ children }) {
             <p className="text-gray-700 text-lg mb-6">
               We are working hard to bring something amazing. Stay tuned!
             </p>
-            {/* <img
-              src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
-              alt="Under Construction"
-              className="w-48 h-48 mx-auto"
-            /> */}
+          
           </div>
-        </div>
+        </div> */}
       </body>
     </html>
   );
