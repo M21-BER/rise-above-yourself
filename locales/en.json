@@ -151,5 +151,7 @@
         "title": "Page Not Found | 404",
         "desc": "Could not find the requested resources"
     },
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "gallery": "Gallery",
+    "upcoming_events": "Upcoming Events"
 }

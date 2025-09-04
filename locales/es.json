@@ -151,5 +151,7 @@
         "title": "Página no encontrada | 404",
         "desc": "No se pudieron encontrar los recursos solicitados"
     },
-    "loading": "Cargando..."
+    "loading": "Cargando...",
+    "galleries": "Galería",
+    "upcoming_events": "Próximos eventos"
 }

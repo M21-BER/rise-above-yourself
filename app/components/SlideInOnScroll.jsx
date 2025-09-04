@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 export default function SlideInFromTop({ children }) {
   const ref = useRef(null);
   const controls = useAnimation();
-  const inView = useInView(ref, { once: false, margin: "-100px" });
+  const inView = useInView(ref, { once: false, margin: "-50px 0px" });
 
   useEffect(() => {
     if (inView) {

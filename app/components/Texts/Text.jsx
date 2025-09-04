@@ -93,6 +93,26 @@ export function MoreThanGymTextTitle() {
     </h1>
   );
 }
+export function Gallery() {
+  const { t, mounted } = useMountedTranslation();
+  if (!mounted) return null;
+
+  return (
+    <h1 className="text-4xl font-normal font-anton tracking-wide text-red-600 uppercase">
+      {t("gallery")}
+    </h1>
+  );
+}
+export function UpcomingEvent() {
+  const { t, mounted } = useMountedTranslation();
+  if (!mounted) return null;
+
+  return (
+    <h1 className="text-4xl font-normal font-anton tracking-wide text-red-600 uppercase">
+      {t("upcoming_events")}
+    </h1>
+  );
+}
 
 export function MoreThanGymTextDesc() {
   const { t, mounted } = useMountedTranslation();
