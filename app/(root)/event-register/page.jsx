@@ -17,7 +17,7 @@ const translations = {
     contactName: "Contact's Full Name",
     contactPhone: "Contact's Phone Number",
     payment: "Payment Method",
-    paymentDesc: "Camp Fee: $150.00. How would you like to pay?",
+    paymentDesc: "How would you like to pay?",
     creditCard: "Credit/Debit Card",
     nameOnCard: "Name on Card",
     expiry: "MM/YY",
