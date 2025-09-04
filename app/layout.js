@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         <Link href="/free-trial">
           <div className="fixed bottom-0 w-full bg-red-600 py-4 px-5 flex items-center justify-center gap-3 shadow-lg z-50 hover:bg-red-700 transition">
             <p className="text-white font-anton text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center">
-              Try Us For Free
+              Get a Day Pass
             </p>
             <Image
               src="/right-chevron.png"

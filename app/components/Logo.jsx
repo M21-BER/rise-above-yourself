@@ -22,13 +22,13 @@ function Logo() {
       {/* Text (sm and up) */}
       <div className="hidden sm:flex flex-col justify-center leading-tight pl-1">
         <h2
-          className="font-dm_sans text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] tracking-tight leading-tight"
+          className="font-allerta_stencil text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] tracking-tight leading-tight"
           style={{ maxHeight: "60%" }}
         >
           R.A.Y ATHLETICS
         </h2>
         <h4
-          className="font-semibold font-dm_sans text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] text-red-600 leading-snug tracking-wide"
+          className="font-semibold font-sans italic text-[9px] sm:text-[10px] md:text-[10px] lg:text-[10px] text-red-600 leading-snug tracking-wide"
           style={{ maxHeight: "40%" }}
         >
           RISE ABOVE YOURSELF

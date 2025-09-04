@@ -13,10 +13,10 @@ export default function HeroSection() {
       <Landing />
       <ResponsiveTrainingCards />
       <MoreThanGym />
+      <PromoSlider />
       {/* <TheProcess /> */}
       <Testimonies />
       <InTheZone />
-      <PromoSlider />
       <AppShowcase />
     </>
   );
