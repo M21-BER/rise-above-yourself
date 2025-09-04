@@ -59,14 +59,14 @@ export default function PromoCards() {
                 </h3>
                 <p className="text-gray-600 mt-1">{item.desc}</p>
               </div>
-              {/* {item.link && (
+              {item.link && (
                 <Link
                   href={`/${item.link}`}
                   className="inline-block mt-3 text-red-600 font-semibold hover:underline"
                 >
                   Register
                 </Link>
-              )} */}
+              )}
             </div>
           </div>
         ))}
